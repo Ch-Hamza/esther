@@ -1,0 +1,155 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <!-- Start Preloader -->
+    <div id="tm-preloader">
+        <div id="tm-preloader-in">
+            <div></div><div></div><div></div><div></div><div></div>
+        </div>
+    </div>
+    <!-- End Preloader -->
+
+    {% include 'default/header1.html.twig' %}
+
+    <!-- Start Blog Header -->
+    <section class="tm-blog-hero">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="tm-blog-hero-title">Blog</h1>
+                    <ul class="tm-breadcrumb">
+                        <li><a href="{{ path('homepage') }}">Home</a></li>
+                        <li>Blog</li>
+                    </ul>
+                </div><!-- .col -->
+            </div>
+        </div>
+    </section>
+    <!-- End Blog Header -->
+
+    <!-- Start Site Content -->
+    <div class="tm-blog-section tm-blog-right-sidebar">
+        <div class="empty-space col-md-b100 col-xs-b70"></div>
+        <div class="container">
+            <div class="row">
+                <main class="col-xl-12">
+                    <div class="tm-site-main">
+                        <article class="tm-post">
+                            <header class="tm-entry-header">
+                                <div class="tm-post-thumb row justify-content-center">
+                                    <img src="{{ asset('assets/img/logos/51064643_2210866862506804_2880550246629244928_n.png') }}" alt="">
+                                </div>
+                                <div class="tm-post-details-wrap pt-5">
+                                    <h2 class="tm-entry-title">Nos garanties</h2>
+                                </div>
+                            </header>
+                            <div class="tm-entry-content">
+                                <div class="pt-3">
+                                    <blockquote class="fw-600">Votre santé nous est précieuse</blockquote>
+                                </div>
+                                <div class="pt-5">
+                                    Ishtar Assistance Tunisie est une plateforme qui propose aux patients venant des quatre
+                                    coins du monde une prise en charge complète de leur séjour médical. L’objectif étant
+                                    de simplifier la venue des patients en leur offrant l’accueil, le transport et le logement
+                                    dans les hôtels les plus prestigieux de la capitale.
+                                </div>
+                                <div class="pt-5">
+                                    <p>
+                                        Pour assurer à chaque patient les meilleurs soins possibles
+                                        aux prix les plus bas en Tunisie, Ishtar Assistance Tunisie collabore
+                                        avec des cliniques récentes, renommées et à la pointe de la technologie.
+                                    </p>
+                                    <p>
+                                        Ishtar Assistance Tunisie propose un large choix d’interventions, relatives à
+                                        différentes spécialités: la chirurgie esthétique et réparatrice, la chirurgie
+                                        orthopédie, la chirurgie de l’obésité, la chirurgie dentaire,
+                                        la greffe de cheveux capillaires, l’ophtalmologie et le traitement de l’infertilité.
+                                    </p>
+                                    <p>
+                                        Pour assurer le confort et le bien-être de chaque patient, un membre de
+                                        Ishtar Assistance Tunisie sera présent dès l’arrivée du patient jusqu’à son départ.
+                                        Il se chargera de l’accueil à l’aéroport, des différents transferts ainsi que de
+                                        l’admission à la clinique et à l’hôtel.
+                                        Il sera disponible et joignable 24h/24 et répondra à toutes les demandes du patient.
+                                    </p>
+                                    <p>Vous l’avez compris, la clé de notre réussite est la satisfaction de chacun de nos patients!</p>
+                                </div>
+                                <div class="pt-5">
+                                    <h4>Nos Valeurs</h4>
+                                    <p>Afin d’offrir à nos patients la plus haute qualité de soins et services, Ishtar Assistance s’attache particulièrement à :</p>
+                                    <ul>
+                                        <li>Respecter la diversité culturelle, la dignité et les droits de chaque patient.</li>
+                                        <li>Être à l’écoute des besoins du patient et de sa famille.</li>
+                                        <li>Stimuler le travail d’équipe et la libre communication</li>
+                                        <li>S’efforcer d’améliorer en permanence la qualité des services.</li>
+                                        <li>Assurer aux membres du personnel et du corps médical un environnement professionnel propre et sûr, garantissant les meilleures conditions de travail et d’efficacité.</li>
+                                        <li>Respecter la législation tunisienne et le code d’éthique des différentes cliniques dans lesquelles nous opérons.</li>
+                                        <li>Offrir un service personnalisé et un suivi rigoureux au patient pour un traitement efficace</li>
+                                    </ul>
+                                </div>
+                                <div class="pt-5">
+                                    <h4>Nos Garanties</h4>
+                                    <p>
+                                        Nos partenaires chirurgiens esthétiques Tunisiens ont décide de ne pas pratiquer d’interventions
+                                        pourvoyeuses de complications ou au suivi long. Nous avons aussi pris la décision ne pas opérer
+                                        les patients à risque pour minimiser ainsi l’incidence des accidents. Cependant, en terme de
+                                        chirurgie une complication doit toujours être envisagée par le praticien
+                                        et la politique de ISHTAR ASSISTANCE TUNISIE est la suivante:
+                                    </p>
+                                </div>
+                                <div class="pt-5">
+                                    <h5>En cas de complication avérée :</h5>
+                                    <p>
+                                        Il y a pour chaque complication une solution immédiate qui remet les choses en ordre et qui évidemment
+                                        assumée par notre équipe. Le patient est d’abord entièrement pris en charge en Tunisie.
+                                    </p>
+                                </div>
+                                <div class="pt-5">
+                                    <h5>En cas de résultat insatisfaisant :</h5>
+                                    <p>
+                                        Une évaluation sur photos sera faite.Si l’insuffisance de résultat est manifeste,
+                                        le ré-intervention sera à la charge de ISHTAR ASSISTANCE TUNISIE. Les malfaçons
+                                        existent en chirurgie esthétique. Les recours en justice nécessitent de nombreuses
+                                        années pour obtenir réparation. Avec ISHTAR ASSISTANCE TUNISIE, nul besoin de recourir
+                                        aux tribunaux. Nous reprenons votre intervention sans délai.
+                                        Notre garantie ne s’applique pas dans les conditions suivantes :
+                                    </p>
+                                    <ul>
+                                        <li>Fausse déclaration dans le formulaire de demande de consultation gratuite, notamment au niveau des antécédents médicaux.</li>
+                                        <li>Non respect de l’une des conditions mentionnées dans le devis : recommandations médicales avant l’intervention (tabagisme, prise médicamenteuse interdite…), interruption volontaire ou involontaire de séjour post opératoire, etc..</li>
+                                        <li>Non respect des recommandations médicales post opératoires faites par le chirurgien traitant.</li>
+                                        <li>Coques de prothèses mammaires : les coques ne sont pas considérées comme des complications mais comme des effets indésirables et impondérables.</li>
+                                    </ul>
+                                </div>
+                                <div class="pt-5">
+                                    <h5>Validité de notre garantie :</h5>
+                                    <p>
+                                        Huit mois à compter de la date de l’intervention. Ces engagements sont contractuels et reposent sur une bonne foi mutuelle.
+                                    </p>
+                                </div>
+                                <div class="pt-5">
+                                    <h5>Modalité de la prise ne charge en cas de ré-intervention :</h5>
+                                    <p>
+                                        Notre garantie couvre les frais de séjour en Tunisie ( qui ne seront pas pris en charge que pour le patient),
+                                        les frais de la clinique, les honoraires de votre chirurgien et de l’anesthésiste, les nuitées
+                                        d’hospitalisation et les prothèses ou la gaine s’il y a lieu. Cette prise en charge ne couvre
+                                        pas les vols, la pharmacie en clinique.
+                                        Aucune garantie n’est donnée pour la FIV, l’insémination artificielle ou l’ICSI.
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+                        <div class="empty-space col-md-b60 col-xs-b30"></div>
+                    </div>
+                </main>
+            </div>
+        </div>
+        <div class="empty-space col-md-b100 col-xs-b70"></div>
+    </div>
+    <!-- End Site Content -->
+
+    {% include 'default/footer.html.twig' %}
+
+    <!-- Scroll Up -->
+    <div id='scrollup'></div>
+{% endblock %}

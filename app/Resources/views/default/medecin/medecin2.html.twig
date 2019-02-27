@@ -1,0 +1,66 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <!-- Start Preloader -->
+    <div id="tm-preloader">
+        <div id="tm-preloader-in">
+            <div></div><div></div><div></div><div></div><div></div>
+        </div>
+    </div>
+    <!-- End Preloader -->
+
+    {% include 'default/header1.html.twig' %}
+
+    <!-- Start Blog Header -->
+    <section class="tm-blog-hero">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="tm-blog-hero-title">DR. NAJOUA BEN SLIMEN</h1>
+                    <ul class="tm-breadcrumb">
+                        <li><a href="{{ path('homepage') }}">Home</a></li>
+                        <li>DR. NAJOUA BEN SLIMEN</li>
+                    </ul>
+                </div><!-- .col -->
+            </div>
+        </div>
+    </section>
+    <!-- End Blog Header -->
+
+    <!-- Start Site Content -->
+    <div class="container">
+        <div class="row justify-content-center p-5">
+            <div class="col-lg-5 col-md-8">
+                <img src="{{ asset('assets/img/doctors/a59c93de-10b5-4bce-a56b-7cc619888214-600x600.jpg') }}" alt="">
+            </div>
+            <div class="col-lg-7 col-md-10">
+                <h2>Dr Najoua Ben Slimen</h2>
+                <h4 class="cv-title">Chirurgie maxillo-faciale et de chirurgie esthétique</h4>
+
+                <ul>
+                    <li>Concours national de Résidanat en décembre 2008 ;</li>
+                    <li>Doctorat en Médecine en Décembre 2012.</li>
+                    <li>Diplôme de chirurgie maxillo-faciale et esthétique en 2013.</li>
+                    <li>Inscrite au tableau de l’ordre des médecins tunisiens sous le numéro 18841.</li>
+                    <li>
+                        Assistante hospitalo-universitaire à la faculté de médecine de Tunis et à
+                        l’hôpital régional de Zaghouan de Novembre 2013- juillet 2018.
+                    </li>
+                    <li>
+                        Actuellement ; exercice privé de chirurgie maxillo-faciale et de chirurgie esthétique.
+                    </li>
+                    <li>
+                        Membre de la société tunisienne de la Société tunisienne de chirurgie plastique,
+                        reconstructrice et esthétique
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- End Site Content -->
+
+    {% include 'default/footer.html.twig' %}
+
+    <!-- Scroll Up -->
+    <div id='scrollup'></div>
+{% endblock %}

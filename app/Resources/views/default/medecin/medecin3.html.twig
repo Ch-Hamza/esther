@@ -1,0 +1,72 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <!-- Start Preloader -->
+    <div id="tm-preloader">
+        <div id="tm-preloader-in">
+            <div></div><div></div><div></div><div></div><div></div>
+        </div>
+    </div>
+    <!-- End Preloader -->
+
+    {% include 'default/header1.html.twig' %}
+
+    <!-- Start Blog Header -->
+    <section class="tm-blog-hero">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="tm-blog-hero-title">Dr Amine Masmoudi</h1>
+                    <ul class="tm-breadcrumb">
+                        <li><a href="{{ path('homepage') }}">Home</a></li>
+                        <li>Dr Amine Masmoudi</li>
+                    </ul>
+                </div><!-- .col -->
+            </div>
+        </div>
+    </section>
+    <!-- End Blog Header -->
+
+    <!-- Start Site Content -->
+    <div class="container">
+        <div class="row justify-content-center p-5">
+            <div class="col-lg-5 col-md-8">
+                <img src="{{ asset('assets/img/doctors/40404077_388833828320315_1069465930653761536_n-600x600.jpg') }}" alt="">
+            </div>
+            <div class="col-lg-7 col-md-10">
+                <h2>Dr Amine Masmoudi</h2>
+                <h4 class="cv-title">Médecine dentaire</h4>
+
+                <p>
+                    Diplôme de médecin dentiste : Faculté de médecine dentaire de Monastir, diplôme d’Implantologie Orale :
+                    Dentoflex Brésil, diplôme d’Implantologie et Chirurgie parodontale : Stide Tunisie, diplôme de
+                    dentisterie esthétique : Stide Tunisie, diplôme de secouriste délivré par le Croissant Rouge Tunisien.
+                </p>
+
+                <p>
+                    Plusieurs formations avec la Fondation Friedrich Naumann (en Tunisie et en Allemagne à Gummersbach) :
+                    TOT Masters, Communication, Leadership.
+                    Plusieurs autres formations avec d’autres académies et organisations sur différents thèmes :
+                    Citoyenneté , Entreprenariat , Travail en groupe, optimisation du travail …
+                </p>
+
+                <h4 class="cv-title">Activités associatives</h4>
+                <p>
+                    Actif en tant que dentiste bénévole dans plusieurs associations dans leurs caravanes
+                    de santé ayant fait des actions sur plusieurs régions du territoire Tunisien.
+                </p>
+                <p>
+                    Membre actif du Croissant Rouge depuis 2012.
+                    Fondateur de L’associa-Med Monastir.
+                    Actif au sein de L’AMCCP (Association Maher pour la Promotion de la Chirurgie Cardiaque Pédiatrique)
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- End Site Content -->
+
+    {% include 'default/footer.html.twig' %}
+
+    <!-- Scroll Up -->
+    <div id='scrollup'></div>
+{% endblock %}

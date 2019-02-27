@@ -1,0 +1,63 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <!-- Start Preloader -->
+    <div id="tm-preloader">
+        <div id="tm-preloader-in">
+            <div></div><div></div><div></div><div></div><div></div>
+        </div>
+    </div>
+    <!-- End Preloader -->
+
+    {% include 'default/header1.html.twig' %}
+
+    <!-- Start Blog Header -->
+    <section class="tm-blog-hero" style="background-image: url('{{ vich_uploader_asset(chirurgie,'imageFile1') }}')">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="tm-blog-hero-title">{{ chirurgie.name }}</h1>
+                    <ul class="tm-breadcrumb">
+                        <li><a href="{{ path('homepage') }}">Home</a></li>
+                        <li>{{ chirurgie.name }}</li>
+                    </ul>
+                </div><!-- .col -->
+            </div>
+        </div>
+    </section>
+    <!-- End Blog Header -->
+
+    <!-- Start Site Content -->
+    <div class="container">
+        <div class="row justify-content-center p-5">
+            <div class="col-lg-10 col-md-10">
+                {{ chirurgie.description|raw }}
+            </div>
+            <div class="col-lg-10 col-md-10">
+                {% for cat in chirurgie.categories %}
+                    <div class="row justify-content-center pt-5">
+                        <h4 class="cv-title pb-3">{{ cat.name }}</h4>
+                        <div class="row">
+                            <div class="col-lg-4 col-md-10">
+                                <img src="{{ vich_uploader_asset(cat, 'coverimageFile') }}" alt="">
+                            </div>
+                            <div class="col-lg-8 col-md-10">
+                                {{ cat.description }}
+                                <div class="empty-space col-xs-b25"></div>
+                                <div class="tm-about-btn">
+                                    <a href="{{ path('chirurgie_details_index', {'id': cat.id}) }}" class="tm-btn1">LIRE LA SUITE</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <!-- End Site Content -->
+
+    {% include 'default/footer.html.twig' %}
+
+    <!-- Scroll Up -->
+    <div id='scrollup'></div>
+{% endblock %}

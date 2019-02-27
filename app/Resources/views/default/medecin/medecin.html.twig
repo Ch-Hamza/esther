@@ -1,0 +1,114 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <!-- Start Preloader -->
+    <div id="tm-preloader">
+        <div id="tm-preloader-in">
+            <div></div><div></div><div></div><div></div><div></div>
+        </div>
+    </div>
+    <!-- End Preloader -->
+
+    {% include 'default/header1.html.twig' %}
+
+    <!-- Start Blog Header -->
+    <section class="tm-blog-hero">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="tm-blog-hero-title">DR ZIED MABROUKI</h1>
+                    <ul class="tm-breadcrumb">
+                        <li><a href="{{ path('homepage') }}">Home</a></li>
+                        <li>Dr Zied MABROUKI</li>
+                    </ul>
+                </div><!-- .col -->
+            </div>
+        </div>
+    </section>
+    <!-- End Blog Header -->
+
+    <!-- Start Team Member -->
+    <section id="doctor">
+        <div class="empty-space col-md-b100 col-xs-b70"></div>
+        <div class="tm-section-heading text-center">
+            <h2>NOS MÉDECINS EXPÉRIMENTÉS</h2>
+            <div class="tm-section-seperator"><span></span></div>
+            <div class="empty-space col-md-b60 col-xs-b40"></div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="tm-member-carousel owl-carousel tm-nam-tm-style1  tm-dots1">
+                        <div class="tm-team-member">
+                            <div class="tm-member-hover">
+                                <a href="{{ path('first-medecin') }}" class="tm-member-thumb">
+                                    <img src="{{ asset('assets/img/doctors/0.jpg') }}" alt="">
+                                </a>
+                                <div class="tm-member-social-btn-wrap"></div>
+                            </div>
+                            <div class="tm-member-meta tm-gray-bg text-center">
+                                <h3 class="tm-member-name"><a href="{{ path('first-medecin') }}">Dr Zied MABROUKI</a></h3>
+                                <span class="tm-member-speciality">Chirurgie Plastique Réparatrice et Esthétique</span>
+                            </div>
+                        </div><!-- .tm-team-member -->
+                        <div class="tm-team-member">
+                            <div class="tm-member-hover">
+                                <a href="{{ path('second-medecin') }}" class="tm-member-thumb">
+                                    <img src="{{ asset('assets/img/doctors/a59c93de-10b5-4bce-a56b-7cc619888214-600x600.jpg') }}" alt="">
+                                </a>
+                                <div class="tm-member-social-btn-wrap"></div>
+                            </div>
+                            <div class="tm-member-meta tm-gray-bg text-center">
+                                <h3 class="tm-member-name"><a href="{{ path('second-medecin') }}">Dr Najoua Ben Slimen</a></h3>
+                                <span class="tm-member-speciality">Chirurgie maxillo-faciale et de chirurgie esthétique</span>
+                            </div>
+                        </div><!-- .tm-team-member -->
+                        <div class="tm-team-member">
+                            <div class="tm-member-hover">
+                                <a href="{{ path('third-medecin') }}" class="tm-member-thumb">
+                                    <img src="{{ asset('assets/img/doctors/40404077_388833828320315_1069465930653761536_n-600x600.jpg') }}" alt="">
+                                </a>
+                                <div class="tm-member-social-btn-wrap"></div>
+                            </div>
+                            <div class="tm-member-meta tm-gray-bg text-center">
+                                <h3 class="tm-member-name"><a href="{{ path('third-medecin') }}">Dr Amine Masmoudi</a></h3>
+                                <span class="tm-member-speciality">Médecine dentaire</span>
+                            </div>
+                        </div><!-- .tm-team-member -->
+                        <div class="tm-team-member">
+                            <div class="tm-member-hover">
+                                <a href="{{ path('fourth-medecin') }}" class="tm-member-thumb">
+                                    <img src="{{ asset('assets/img/doctors/11816994_949374025123225_8414511471603356866_n-600x600.jpg') }}" alt="">
+                                </a>
+                                <div class="tm-member-social-btn-wrap"></div>
+                            </div>
+                            <div class="tm-member-meta tm-gray-bg text-center">
+                                <h3 class="tm-member-name"><a href="{{ path('fourth-medecin') }}">Dr Chedi BALI</a></h3>
+                                <span class="tm-member-speciality">Chirurgie esthétique et réparatrice</span>
+                            </div>
+                        </div><!-- .tm-team-member -->
+                        <div class="tm-team-member">
+                            <div class="tm-member-hover">
+                                <a href="{{ path('fifth-medecin') }}" class="tm-member-thumb">
+                                    <img src="{{ asset('assets/img/doctors/Dr-djemal.jpg') }}" alt="">
+                                </a>
+                                <div class="tm-member-social-btn-wrap"></div>
+                            </div>
+                            <div class="tm-member-meta tm-gray-bg text-center">
+                                <h3 class="tm-member-name"><a href="{{ path('fifth-medecin') }}">Dr Tahar Djemal</a></h3>
+                                <span class="tm-member-speciality">Chirurgie plastique reconstructrice et esthétique</span>
+                            </div>
+                        </div><!-- .tm-team-member -->
+                    </div><!-- .member-carousel -->
+                </div><!-- .col -->
+            </div>
+        </div>
+        <div class="empty-space col-md-b100 col-xs-b70"></div>
+    </section>
+    <!-- End Team Member -->
+
+    {% include 'default/footer.html.twig' %}
+
+    <!-- Scroll Up -->
+    <div id='scrollup'></div>
+{% endblock %}

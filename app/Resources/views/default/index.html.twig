@@ -1,0 +1,897 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <!-- Start Preloader -->
+    <div id="tm-preloader">
+        <div id="tm-preloader-in">
+            <div></div><div></div><div></div><div></div><div></div>
+        </div>
+    </div>
+    <!-- End Preloader -->
+
+    <!-- Start Site Header Wrap -->
+    <header class="tm-header3">
+        <div class="tm-site-header">
+            <div class="tm-header-info-wrap">
+                <div class="container tm-header-info">
+                    <a href="#"><i class="fa fa-phone"></i>+216 54 090926 / +216 54 388569</a>
+                    <a href="#"><i class="fa fa-envelope"></i>contact@ishtarassistance.com</a>
+                </div>
+            </div>
+            <div class="tm-header-menu">
+                <div class="container tm-header-menu-container">
+                    <div class="tm-site-branding">
+                        <a href="{{ path('homepage') }}" class="tm-logo-link index-title">
+                            <img class="tm-logo logo-header" src="{{ asset('assets/img/logos/51279125_615054338948710_3412857584078553088_n.png') }}" alt="">
+                            Eshter Assistance
+                        </a>
+                    </div>
+                    <nav class="tm-primary-nav">
+                        <ul class="tm-primary-nav-list">
+                            <li class="menu-item">
+                                <a href="{{ path('homepage') }}" class="nav-link ">Accueil</a>
+                            </li>
+                            <li class="menu-item menu-item-has-children"><a href="{{ path('homepage') }}#department" class="nav-link">Interventions</a>
+                                <ul>
+                                    {% for c in chirurgies %}
+                                    <li class="menu-item"><a href="{{ path('chirurgie_index', {'id': c.id}) }}">{{ c.name }}</a></li>
+                                    {% endfor %}
+                                </ul>
+                            </li>
+                            <li class="menu-item menu-item-has-children"><a href="" class="nav-link">Séjour</a>
+                                <ul>
+                                    <li class="menu-item"><a href="{{ path('procedure_index') }}">Procédure</a></li>
+                                    <li class="menu-item"><a href="{{ path('clinique_index') }}">Clinique</a></li>
+                                    <li class="menu-item"><a href="{{ path('hotel_index') }}">Hôtel</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item"><a href="{{ path('tarifs_index') }}" class="nav-link">Tarifs</a></li>
+                            <li class="menu-item" id="devis_link"><a href="#" class="nav-link">Devis</a></li>
+                            <li class="menu-item"><a href="{{ path('blog_index') }}" class="nav-link">Blog</a></li>
+                            <li class="menu-item"><a href="#" id="contact_link" class="nav-link">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div><!-- .tm-header-menu-container -->
+            </div><!-- .tm-header-menu -->
+        </div><!-- .tm-site-header -->
+    </header>
+    <!-- End Site Header Wrap -->
+
+    <!-- Start Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="slider-text">
+                <h1 class="tm-headline letters tm-rotate-text">Eshter Assistance <br>
+                    Votre santé nous est précieuse <br>
+                    Chirurgie
+                    <span class="tm-words-wrapper">
+                        <b class="is-visible">des&nbsp;seins</b>
+                        <b>du&nbsp;visage</b>
+                        <b>de&nbsp;la&nbsp;silhouette</b>
+                        <b>intime</b>
+                        <b>orthopédique</b>
+                        <b>de&nbsp;l'obésité</b>
+                        <b>capillaire</b>
+                        <b>de&nbsp;l'infertilité</b>
+                        <b>dentaire</b>
+                        <b>ophtalmologie</b>
+                    </span>
+                </h1>
+                <div class="empty-space col-sm-b20 col-xs-b10"></div>
+                <p>
+                    Ishtar Assistance est le leader du tourisme esthétique et médical en Tunisie.<br>
+                    Notre équipe assure un suivi personnalisé pour vous garantir les meilleurs conditions durant votre séjour.
+                </p>
+                <div class="empty-space col-md-b55 col-sm-b35 col-xs-b25"></div>
+                <div class="row">
+                    <div class="tm-hero-btn"><a href="#contact" class="tm-btn1">Contactez nous</a></div>
+                    <div class="tm-hero-btn ml-3"><a href="#appointment" class="tm-btn1">Devis</a></div>
+                </div>
+
+            </div>
+        </div><!-- .container -->
+        <div class="tm-hero-slider owl-carousel tm-dots1" id="tm-hero-slider">
+            <img src="{{ asset('assets/img/slide-01.jpg') }}" alt="slide-01">
+            <img src="{{ asset('assets/img/slide-02.jpg') }}" alt="slide-02">
+            <img src="{{ asset('assets/img/slide-03.jpg') }}" alt="slide-03">
+        </div>
+        <div class="hero-overlay"></div>
+        <img src="{{ asset('assets/img/sweet-shap.png') }}" alt="Sweet Shap" class="sweet-shap">
+    </section>
+    <!-- End Hero Section -->
+
+    <!-- Start  -->
+    <section>
+        <div class="empty-space col-md-b100 col-xs-b40"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4" >
+                    <div class="empty-space col-md-b0 col-xs-b30"></div>
+                    <div class="tm-icon-box">
+                        <div class="tm-icon"><i class="fa fa-user-md"></i></div>
+                        <h2 class="tm-icon-box-title">Médecins qualifiés</h2>
+                        <p class="tm-icon-box-text">
+                            Une sélection Des médecins , spécialistes et chirurgiens hautement qualifiés et expérimentés.
+                            Plus de 50 opérations et des soins personnalisés pour chaque patient suivant ses demandes et ses besoins.
+                        </p>
+                    </div>
+                </div><!-- .col -->
+                <div class="col-lg-4">
+                    <div class="empty-space col-md-b0 col-xs-b30"></div>
+                    <div class="tm-icon-box">
+                        <div class="tm-icon"><i class="fa fa-ambulance"></i></div>
+                        <h2 class="tm-icon-box-title">Clinique</h2>
+                        <p class="tm-icon-box-text">
+                            La clinique Myron est un établissement répond à toutes les normes actuellement requises dans le domaine de la santé lui permettant de se hisser parmi les plus innovants du continent.
+                        </p>
+                    </div>
+                </div><!-- .col -->
+                <div class="col-lg-4">
+                    <div class="empty-space col-md-b0 col-xs-b30"></div>
+                    <div class="tm-icon-box">
+                        <div class="tm-icon"><i class="fa fa-hospital-o"></i></div>
+                        <h2 class="tm-icon-box-title">Service 24 heures</h2>
+                        <p class="tm-icon-box-text">
+                            Votre santé nous est précieuse.
+                            C'est notre devise, pour celà nous assurons une assistance rapprochée et suivi personnalisé avec une disponibilité 24h/7j.
+                        </p>
+                    </div>
+                </div><!-- .col -->
+            </div><!-- .row -->
+        </div>
+    </section>
+    <!-- Start  -->
+
+    <!-- Start About Secton -->
+    <section id="about">
+        <div class="empty-space col-md-b100 col-xs-b70"></div>
+        <div class="tm-section-heading text-center">
+            <h2>QUI SOMMES NOUS</h2>
+            <div class="tm-section-seperator"><span></span></div>
+            <div class="empty-space col-md-b60 col-xs-b40"></div>
+        </div>
+        <div class="tm-relative">
+            <div class="tm-half-section-bg left">
+                <img src="{{ asset('assets/img/about-hafl-bg.jpg') }}" alt="about hafl bg">
+            </div>
+            <div class="empty-space col-xs-b60"></div>
+            <div class="container">
+                <div class="row row-md-reverce">
+                    <div class="col-lg-5">
+                        <div class="tm-shedule-wrap">
+                            <div class="tm-shedule">
+                                <h3 class="tm-shedule-title">Opening Hours</h3>
+                                <ul class="tm-shedule-list">
+                                    <li>
+                                        <span>Monday - Friday</span>
+                                        <span>8:00 - 18:00</span>
+                                    </li>
+                                    <li>
+                                        <span>Saturday</span>
+                                        <span>9.00 - 18.00</span>
+                                    </li>
+                                    <li>
+                                        <span>Sunday</span>
+                                        <span>Closed</span>
+                                    </li>
+                                </ul>
+                            </div><!-- .tm-shedule -->
+                            <div class="empty-space col-md-b40 col-xs-b30"></div>
+                            <div class="tm-shedule">
+                                <h3 class="tm-shedule-title">Visitors Hours</h3>
+                                <ul class="tm-shedule-list">
+                                    <li>
+                                        <span>Monday - Friday</span>
+                                        <span>8:00 - 18:00</span>
+                                    </li>
+                                    <li>
+                                        <span>Saturday</span>
+                                        <span>9.00 - 18.00</span>
+                                    </li>
+                                    <li>
+                                        <span>Sunday</span>
+                                        <span>Closed</span>
+                                    </li>
+                                </ul>
+                            </div><!-- .tm-shedule -->
+                        </div>
+                    </div><!-- .col -->
+                    <div class="col-lg-7">
+                        <div class="empty-space col-md-b30 col-xs-b0"></div>
+                        <div class="tm-about-wrap tm-hf-hide">
+                            <div class="tm-about tm-gray-bg wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.1s">
+                                <h3 class="tm-about-title">Pourquoi les gens <span>Nous</span> choisissent?</h3>
+                                <div class="tm-about-text">
+                                    <p>Nous fournissons le meilleur service dans tout le pays. Les gens nous choisissent en raison des avantages suivants. </p>
+                                    <p>Nous nous engageons à vous accompagner dans votre démarche, vous assister, vous orienter depuis l’accueil à l’aéroport jusqu’à votre départ. Il s’agit d’une prise en charge complète et le prix inclut le traitement, l’accueil, le transport en voiture, le logement à la clinique et à l’hôtel ainsi que les honoraires du médecin.  </p>
+                                </div>
+                                <div class="empty-space col-xs-b25"></div>
+                                <div class="tm-about-btn">
+                                    <a href="#" class="tm-btn1">LIRE LA SUITE</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="empty-space col-xs-b30"></div>
+                    </div><!-- .col -->
+                </div>
+            </div>
+            <div class="empty-space col-xs-b60"></div>
+        </div>
+    </section>
+    <!-- End About Secton -->
+
+    <!-- Start Department Section -->
+    <section class="tm-gray-bg" id="department">
+        <div class="empty-space col-md-b100 col-xs-b70"></div>
+        <div class="tm-section-heading text-center">
+            <h2>Nos Départements</h2>
+            <div class="tm-section-seperator"><span></span></div>
+            <div class="empty-space col-md-b60 col-xs-b40"></div>
+        </div>
+        <div class="container">
+            <div class="tm-tab-wrap">
+                <div class="tm-tabs-wrap">
+                    <ul class="tabs">
+                        {% for c in chirurgies %}
+                            <li>
+                                <img src="{{ vich_uploader_asset(c,'imageFile2') }}" alt="">
+                                {{ c.name }}
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div class="empty-space col-md-b60 col-xs-b40"></div>
+                <div class="tm-tab-content">
+                    {% for c in chirurgies %}
+                        <div class="tm-tabs-item">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="tm-dept-img"><img src="{{ vich_uploader_asset(c,'imageFile1') }}" alt=""></div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="tm-dept-details-wrap">
+                                        <div class="tm-about tm-gray-bg">
+                                            <h3 class="tm-about-title"><span>{{ c.name }}</span></h3>
+                                            <div class="tm-about-text">
+                                                {{ c.description|raw }}
+                                            </div>
+                                            <div class="empty-space col-xs-b25"></div>
+                                            <div class="tm-about-btn">
+                                                <a href="{{ path('chirurgie_index', {'id': c.id}) }}" class="tm-btn1">LIRE LA SUITE</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <div class="empty-space col-md-b100 col-xs-b70"></div>
+    </section>
+    <!-- End Department Section -->
+
+    <!-- Start Team Member -->
+    <section id="doctor">
+        <div class="empty-space col-md-b100 col-xs-b70"></div>
+        <div class="tm-section-heading text-center">
+            <h2>NOS MÉDECINS EXPÉRIMENTÉS</h2>
+            <div class="tm-section-seperator"><span></span></div>
+            <div class="empty-space col-md-b60 col-xs-b40"></div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="tm-member-carousel owl-carousel tm-nam-tm-style1  tm-dots1">
+                        <div class="tm-team-member">
+                            <div class="tm-member-hover">
+                                <a href="{{ path('first-medecin') }}" class="tm-member-thumb">
+                                    <img src="{{ asset('assets/img/doctors/0.jpg') }}" alt="">
+                                </a>
+                                <div class="tm-member-social-btn-wrap"></div>
+                            </div>
+                            <div class="tm-member-meta tm-gray-bg text-center">
+                                <h3 class="tm-member-name"><a href="{{ path('first-medecin') }}">Dr Zied MABROUKI</a></h3>
+                                <span class="tm-member-speciality">Chirurgie Plastique Réparatrice et Esthétique</span>
+                            </div>
+                        </div><!-- .tm-team-member -->
+                        <div class="tm-team-member">
+                            <div class="tm-member-hover">
+                                <a href="{{ path('second-medecin') }}" class="tm-member-thumb">
+                                    <img src="{{ asset('assets/img/doctors/a59c93de-10b5-4bce-a56b-7cc619888214-600x600.jpg') }}" alt="">
+                                </a>
+                                <div class="tm-member-social-btn-wrap"></div>
+                            </div>
+                            <div class="tm-member-meta tm-gray-bg text-center">
+                                <h3 class="tm-member-name"><a href="{{ path('second-medecin') }}">Dr Najoua Ben Slimen</a></h3>
+                                <span class="tm-member-speciality">Chirurgie maxillo-faciale et de chirurgie esthétique</span>
+                            </div>
+                        </div><!-- .tm-team-member -->
+                        <div class="tm-team-member">
+                            <div class="tm-member-hover">
+                                <a href="{{ path('third-medecin') }}" class="tm-member-thumb">
+                                    <img src="{{ asset('assets/img/doctors/40404077_388833828320315_1069465930653761536_n-600x600.jpg') }}" alt="">
+                                </a>
+                                <div class="tm-member-social-btn-wrap"></div>
+                            </div>
+                            <div class="tm-member-meta tm-gray-bg text-center">
+                                <h3 class="tm-member-name"><a href="{{ path('third-medecin') }}">Dr Amine Masmoudi</a></h3>
+                                <span class="tm-member-speciality">Médecine dentaire</span>
+                            </div>
+                        </div><!-- .tm-team-member -->
+                        <div class="tm-team-member">
+                            <div class="tm-member-hover">
+                                <a href="{{ path('fourth-medecin') }}" class="tm-member-thumb">
+                                    <img src="{{ asset('assets/img/doctors/11816994_949374025123225_8414511471603356866_n-600x600.jpg') }}" alt="">
+                                </a>
+                                <div class="tm-member-social-btn-wrap"></div>
+                            </div>
+                            <div class="tm-member-meta tm-gray-bg text-center">
+                                <h3 class="tm-member-name"><a href="{{ path('fourth-medecin') }}">Dr Chedi BALI</a></h3>
+                                <span class="tm-member-speciality">Chirurgie esthétique et réparatrice</span>
+                            </div>
+                        </div><!-- .tm-team-member -->
+                        <div class="tm-team-member">
+                            <div class="tm-member-hover">
+                                <a href="{{ path('fifth-medecin') }}" class="tm-member-thumb">
+                                    <img src="{{ asset('assets/img/doctors/Dr-djemal.jpg') }}" alt="">
+                                </a>
+                                <div class="tm-member-social-btn-wrap"></div>
+                            </div>
+                            <div class="tm-member-meta tm-gray-bg text-center">
+                                <h3 class="tm-member-name"><a href="{{ path('fifth-medecin') }}">Dr Tahar Djemal</a></h3>
+                                <span class="tm-member-speciality">Chirurgie plastique reconstructrice et esthétique</span>
+                            </div>
+                        </div><!-- .tm-team-member -->
+                    </div><!-- .member-carousel -->
+                </div><!-- .col -->
+            </div>
+        </div>
+        <div class="empty-space col-md-b100 col-xs-b70"></div>
+    </section>
+    <!-- End Team Member -->
+
+    <!-- Start Fun Fact Section -->
+    <section class="tm-fun-fact-wrap tm-bg">
+        <div class="empty-space col-md-b100 col-xs-b70"></div>
+        <div class="container">
+            <div class="row">
+                <div class="tm-section-heading text-center">
+                    <h2>ISHTAR ASSISTANCE EN CHIFFRES</h2>
+                    <div class="empty-space col-md-b60 col-xs-b40"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="tm-fun-fact text-center">
+                        <i class="icofont icofont-doctor wow fadeInDown" data-wow-delay="0.6s" data-wow-duration="2s"></i>
+                        <h2 class="tm-counter">10</h2>
+                        <h3>Médecins qualifiés</h3>
+                    </div>
+                    <div class="empty-space col-xs-b30"></div>
+                </div><!-- .col -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="tm-fun-fact text-center">
+                        <i class="icofont icofont-hat-alt wow fadeInDown" data-wow-delay="0.2s" data-wow-duration="2s"></i>
+                        <h2 class="tm-counter">8</h2>
+                        <h3>Spécialités médicales</h3>
+                    </div>
+                    <div class="empty-space col-xs-b30"></div>
+                </div><!-- .col -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="tm-fun-fact text-center">
+                        <i class="icofont icofont-medicine wow fadeInDown" data-wow-delay="0.8s" data-wow-duration="2s"></i>
+                        <h2 class="tm-counter">50</h2>
+                        <h3>Interventions proposés</h3>
+                    </div>
+                    <div class="empty-space col-xs-b30"></div>
+                </div><!-- .col -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="tm-fun-fact text-center">
+                        <i class="icofont icofont-emo-simple-smile wow fadeInDown" data-wow-delay="0.4s" data-wow-duration="2s"></i>
+                        <h2 class="tm-counter">2017</h2>
+                        <h3>Jolis sourires</h3>
+                    </div>
+                    <div class="empty-space col-xs-b30"></div>
+                </div><!-- .col -->
+            </div>
+        </div>
+        <div class="empty-space col-lg-b70 col-xs-b40"></div>
+    </section>
+    <!-- End Fun Fact Section -->
+
+    <!-- Start Before & After Section -->
+    <section class="tm-gray-bg">
+        <div class="empty-space col-md-b100 col-xs-b70"></div>
+        <div class="tm-section-heading text-center">
+            <h2>GALERIE AVANT APRÈS</h2>
+            <div class="tm-section-seperator"><span></span></div>
+            <div class="empty-space col-md-b60 col-xs-b40"></div>
+        </div>
+        <div class="container">
+            <div class="before-after-gallery-slider owl-carousel tm-nam-tm-style1">
+                <div class="teeth-beforeafter">
+                    <img src="{{ asset('assets/img/teeth-before-image.jpg') }}" alt="teeth before">
+                    <img src="{{ asset('assets/img/teeth-after-image.jpg') }}" alt="teeth after">
+                </div>
+                <div class="teeth-beforeafter">
+                    <img src="{{ asset('assets/img/face-before-image.jpg') }}" alt="teeth before">
+                    <img src="{{ asset('assets/img/face-after-image.jpg') }}" alt="teeth after">
+                </div>
+                <div class="teeth-beforeafter">
+                    <img src="{{ asset('assets/img/teeth-before-image.jpg') }}" alt="teeth before">
+                    <img src="{{ asset('assets/img/teeth-after-image.jpg') }}" alt="teeth after">
+                </div>
+                <div class="teeth-beforeafter">
+                    <img src="{{ asset('assets/img/face-before-image.jpg') }}" alt="teeth before">
+                    <img src="{{ asset('assets/img/face-after-image.jpg') }}" alt="teeth after">
+                </div>
+            </div>
+        </div>
+        <div class="empty-space col-md-b100 col-xs-b70"></div>
+    </section>
+    <!-- End Before & After Section -->
+
+    <!-- Start Appointment Section -->
+    <section class="tm-relative" id="appointment">
+        <div class="tm-half-section-bg right">
+            <img src="{{ asset('assets/img/appointment-bg.jpg') }}" alt="about hafl bg">
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7 tm-hf-hide">
+                    <div class="empty-space col-md-b0 col-xs-b70"></div>
+                    <div class="tm-appointment-heading tm-gray-bg wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.1s">
+                        <div class="tm-section-heading text-center">
+                            <h2>RENDEZ-VOUS</h2>
+                            <div class="tm-section-seperator"><span></span></div>
+                            <p>Si vous souhaitez prendre rendez-vous pour une intervention médicale, remplissez simplement le formulaire avec des données valides et nous vous contacterons par téléphone pour confirmation.</p>
+                        </div>
+                    </div>
+                </div><!-- .col -->
+                <div class="col-lg-5">
+                    <div class="empty-space col-md-b60 col-xs-b40"></div>
+                    <form method="POST" action="http://thememarch.com/demo/html/medical/trustlife/assets/php/appointment.php" class="tm-appointment-form" id="appointment-form">
+                        <div id="tm-alert1"></div>
+                        <div class="tm-form-field">
+                            <input type="text" id="uname" name="uname" placeholder="Prénom" required>
+                            <span class="bar"></span>
+                        </div>
+                        <div class="tm-form-field">
+                            <input type="text" id="uname" name="uname" placeholder="Nom de famille" required>
+                            <span class="bar"></span>
+                        </div>
+                        <div class="tm-form-field">
+                            <input type="text" id="uemail" name="uemail" placeholder="Adresse de messagerie" required>
+                            <span class="bar"></span>
+                        </div>
+                        <div class="tm-form-field">
+                            <input type="text" id="unumber" name="unumber" placeholder="Numéro de mobile" required>
+                            <span class="bar"></span>
+                        </div>
+                        <div class="tm-form-field">
+                            <input name="udate" type="text" id="udate" placeholder="Date de naissance">
+                            <span class="bar"></span>
+                            <div class="date-icon"><i class="fa fa-calendar"></i></div>
+                        </div>
+                        <div class="tm-form-field">
+                            <div class="tm-custom-select-wrap">
+                                <select name="civility" class="tm-custom-select" id="civility">
+                                    <option value="Madame">Madame</option>
+                                    <option value="Mademoiselle">Mademoiselle</option>
+                                    <option value="Monsieur">Monsieur</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="tm-form-field">
+                            <input type="text" id="unumber" name="unumber" placeholder="Pays" required>
+                            <span class="bar"></span>
+                        </div>
+                        <div class="tm-form-field">
+                            <div class="tm-custom-select-wrap">
+                                <select name="udepartment" class="tm-custom-select" id="udepartment">
+                                    <option value="L'intervention demandée">L'intervention demandée</option>
+                                    <option value="Augmentation mammaire par prothèse mammaires rondes">
+                                        Augmentation mammaire par prothèse mammaires rondes
+                                    </option>
+                                    <option value="Augmentation mammaire par prothèse mammaires anatomiques">
+                                        Augmentation mammaire par prothèse mammaires anatomiques
+                                    </option>
+                                    <option value="Augmentation mammaire par lipofilling">
+                                        Augmentation mammaire par lipofilling
+                                    </option>
+                                    <option value="Lifting mammaire">
+                                        Lifting mammaire
+                                    </option>
+                                    <option value="Réduction mammaire">
+                                        Réduction mammaire
+                                    </option>
+                                    <option value="Gynécomastie">
+                                        Gynécomastie
+                                    </option>
+                                    <option value="Lifting mammaire avec prothèses">
+                                        Lifting mammaire avec prothèses
+                                    </option>
+                                    <option value="Silouhette">
+                                        Silouhette
+                                    </option>
+                                    <option value="Liposuccion une seule zone (ventre...)">
+                                        Liposuccion une seule zone (ventre...)
+                                    </option>
+                                    <option value="Liposuccion sur une petite zone (double menton...)">
+                                        Liposuccion sur une petite zone (double menton...)
+                                    </option>
+                                    <option value="Liposuccion double menton + mini lifting">
+                                        Liposuccion double menton + mini lifting
+                                    </option>
+                                    <option value="Liposuccion moyenne (sur 3 zones et plus)">
+                                        Liposuccion moyenne (sur 3 zones et plus)
+                                    </option>
+                                    <option value="Liposuccion complète (plus de 10 zones)">
+                                        Liposuccion complète (plus de 10 zones)
+                                    </option>
+                                    <option value="Abdominoplastie">
+                                        Abdominoplastie
+                                    </option>
+                                    <option value="Abdominoplastie + Liposuccion moyenne">
+                                        Abdominoplastie + Liposuccion moyenne
+                                    </option>
+                                    <option value="Lifting des bras">
+                                        Lifting des bras
+                                    </option>
+                                    <option value="Augmentation des fesses par implants fessiers">
+                                        Augmentation des fesses par implants fessiers
+                                    </option>
+                                    <option value="Augmentation des fesses par lipofilling">
+                                        Augmentation des fesses par lipofilling
+                                    </option>
+                                    <option value="Liposuccion moyenne + Lipofilling des seins">
+                                        Liposuccion moyenne + Lipofilling des seins
+                                    </option>
+                                    <option value="Liposuccion moyenne + Lipofilling des fesses">
+                                        Liposuccion moyenne + Lipofilling des fesses
+                                    </option>
+                                    <option value="Lifting des cuisses">
+                                        Lifting des cuisses
+                                    </option>
+                                    <option value="Epilation Laser">
+                                        Epilation Laser
+                                    </option>
+                                    <option value="Intime">
+                                        Intime
+                                    </option>
+                                    <option value="Nymphoplastie (réduction des lèvres vaginale)">
+                                        Nymphoplastie (réduction des lèvres vaginale)
+                                    </option>
+                                    <option value="Pénoplastie d'élargissement (élargissement du pénis)">
+                                        Pénoplastie d'élargissement (élargissement du pénis)
+                                    </option>
+                                    <option value="Pénoplastie d'allongement (allongement du pénis)">
+                                        Pénoplastie d'allongement (allongement du pénis)
+                                    </option>
+                                    <option value="Visage">
+                                        Visage
+                                    </option>
+                                    <option value="Lifting cervico-facial">
+                                        Lifting cervico-facial
+                                    </option>
+                                    <option value="Lifting malaire">
+                                        Lifting malaire
+                                    </option>
+                                    <option value="Lifting frontal">
+                                        Lifting frontal
+                                    </option>
+                                    <option value="Lifting complet">
+                                        Lifting complet
+                                    </option>
+                                    <option value="Lipofilling du visage">
+                                        Lipofilling du visage
+                                    </option>
+                                    <option value="Rhinoplastie simple">
+                                        Rhinoplastie simple
+                                    </option>
+                                    <option value="Rhinoplastie et septoplastie">
+                                        Rhinoplastie et septoplastie
+                                    </option>
+                                    <option value="Rhinoplastie ethnique">
+                                        Rhinoplastie ethnique
+                                    </option>
+                                    <option value="Blépharoplastie 2 paupiéres">
+                                        Blépharoplastie 2 paupiéres
+                                    </option>
+                                    <option value="Blépharoplastie 4 paupiéres">
+                                        Blépharoplastie 4 paupiéres
+                                    </option>
+                                    <option value="L'implant capillaire par FUE">
+                                        L'implant capillaire par FUE
+                                    </option>
+                                    <option value="Génioplastie">
+                                        Génioplastie
+                                    </option>
+                                    <option value="Génioplastie d'avancement">
+                                        Génioplastie d'avancement
+                                    </option>
+                                    <option value="Otoplastie">
+                                        Otoplastie
+                                    </option>
+                                    <option value="Augmentation des lèvres">
+                                        Augmentation des lèvres
+                                    </option>
+                                    <option value="Orthopédique">
+                                        Orthopédique
+                                    </option>
+                                    <option value="Prothèse totale du genou">
+                                        Prothèse totale du genou
+                                    </option>
+                                    <option value="Hernie discale">
+                                        Hernie discale
+                                    </option>
+                                    <option value="Prothèse totale de la hanche">
+                                        Prothèse totale de la hanche
+                                    </option>
+                                    <option value="Hallux Valgus">
+                                        Hallux Valgus
+                                    </option>
+                                    <option value="Syndrome du canal carpien">
+                                        Syndrome du canal carpien
+                                    </option>
+                                    <option value="Obésité">
+                                        Obésité
+                                    </option>
+                                    <option value="Anneau gastrique">
+                                        Anneau gastrique
+                                    </option>
+                                    <option value="Sleeve gastrectomie">
+                                        Sleeve gastrectomie
+                                    </option>
+                                    <option value="Bypass">
+                                        Bypass
+                                    </option>
+                                    <option value="Traitement d'infertilité">
+                                        Traitement d'infertilité
+                                    </option>
+                                    <option value="Insémination artificielle">
+                                        Insémination artificielle
+                                    </option>
+                                    <option value="Fécondation in vitro">
+                                        Fécondation in vitro
+                                    </option>
+                                    <option value="Biopsie testiculaire">
+                                        Biopsie testiculaire
+                                    </option>
+                                    <option value="Dentaire">
+                                        Dentaire
+                                    </option>
+                                    <option value="Implant dentaire">
+                                        Implant dentaire
+                                    </option>
+                                    <option value="Pose de facette dentaire">
+                                        Pose de facette dentaire
+                                    </option>
+                                    <option value="Blanchiment dentaire">
+                                        Blanchiment dentaire
+                                    </option>
+                                    <option value="Yeux et Ophtamologie">
+                                        Yeux et Ophtamologie
+                                    </option>
+                                    <option value="Lasik (les 2 yeux)">
+                                        Lasik (les 2 yeux)
+                                    </option>
+                                    <option value="Laser PKR (les 2 yeux)">
+                                        Laser PKR (les 2 yeux)
+                                    </option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="tm-form-field">
+                            <input type="text" id="unumber" name="unumber" placeholder="Horaire de rappel" required>
+                            <span class="bar"></span>
+                        </div>
+                        <div class="tm-form-field">
+                            <div class="tm-custom-select-wrap">
+                                <select name="udoctor" class="tm-custom-select" id="udoctor">
+                                    <option value="doctor">Moyen de rappel</option>
+                                    <option value="jhon-doe">Téléphone</option>
+                                    <option value="mak-rushi">What's app</option>
+                                    <option value="mohoshin-kabir">Viber</option>
+                                    <option value="nayon-borua">Facebook</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="tm-form-field">
+                            <textarea cols="30" rows="10" id="umsg" name="umsg" placeholder="Commentaires"></textarea>
+                            <span class="bar"></span>
+                        </div>
+                        <div class="empty-space col-xs-b10"></div>
+                        <div class="tm-form-field">
+                            <button class="tm-btn1 tm-reverse" type="submit" id="appointment-submit" name="submit">Envoyer</button>
+                        </div>
+                    </form>
+                    <div class="empty-space col-md-b60 col-xs-b70"></div>
+                </div><!-- .col -->
+            </div>
+        </div>
+    </section>
+    <!-- End Appointment Section -->
+
+    <!-- Start News Letter Section -->
+    <div class="tm-newsletter tm-bg">
+        <div class="tm-nl-overlay"></div>
+        <div class="empty-space col-md-b100 col-xs-b70"></div>
+        <div class="container">
+            <form class="mailchimp" action="https://storerepublic.us12.list-manage.com/subscribe/post?u=d227d8d335060b093084903d0&amp;id=9ba078ceb0">
+                <div class="tm-form-field">
+                    <input type="email" name="subscribe" id="subscriber-email" placeholder="Entrez votre adresse email">
+                    <span class="bar"></span>
+                </div>
+                <button type="submit" id="subscribe-button" class="tm-btn1 tm-reverse"><span><i class="icofont icofont-location-arrow"></i>ABONNEZ-VOUS MAINTENANT</span></button>
+                <!-- SUBSCRIPTION SUCCESSFUL OR ERROR MESSAGES -->
+                <h5 class="subscription-success"> .</h5>
+                <h5 class="subscription-error"> .</h5>
+                <label class="subscription-label" for="subscriber-email"></label>
+            </form>
+        </div>
+        <div class="empty-space col-md-b100 col-xs-b70"></div>
+    </div>
+    <!-- End News Letter Section -->
+
+    <!-- Start Contact Section -->
+    <section id="contact">
+        <div class="empty-space col-md-b100 col-xs-b70"></div>
+        <div class="tm-section-heading text-center">
+            <h2>Entrer en contact</h2>
+            <div class="tm-section-seperator"><span></span></div>
+            <div class="empty-space col-md-b60 col-xs-b40"></div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div id="tm-alert"></div>
+                    <form action="http://thememarch.com/demo/html/medical/trustlife/assets/php/mail.php" class="row tm-contact-form" method="post"  id="contact-form">
+                        <div class="col-lg-6">
+                            <div class="tm-form-field">
+                                <input type="text" id="name" name="name" required>
+                                <label>Nom complet</label>
+                            </div>
+                        </div><!-- .col -->
+                        <div class="col-lg-6">
+                            <div class="tm-form-field">
+                                <input type="text" id="email" name="email" required>
+                                <label>Adresse électronique</label>
+                            </div>
+                        </div><!-- .col -->
+                        <div class="col-lg-6">
+                            <div class="tm-form-field">
+                                <input type="text" id="subject" name="subject" required>
+                                <label>Sujet</label>
+                            </div>
+                        </div><!-- .col -->
+                        <div class="col-lg-6">
+                            <div class="tm-form-field">
+                                <input type="text" id="phone" name="phone" required>
+                                <label>Téléphone</label>
+                            </div>
+                        </div><!-- .col -->
+                        <div class="col-lg-12">
+                            <div class="tm-form-field">
+                                <textarea cols="30" rows="10" id="msg" name="msg" required></textarea>
+                                <label>Votre message</label>
+                            </div>
+                        </div><!-- .col -->
+                        <div class="col-lg-12">
+                            <button class="tm-btn1" type="submit" id="submit" name="submit"><span>ENVOYER LE MESSAGE</span></button>
+                            <div class="empty-space col-lg-b30"></div>
+                        </div><!-- .col -->
+                    </form>
+                </div><!-- .col -->
+                <div class="col-lg-4">
+                    <div class="empty-space col-md-b0 col-xs-b40"></div>
+                    <div class="tm-contact-info">
+                        <div class="tm-single-contact">
+                            <i class="fa fa-map-marker"></i>
+                            <h3>Adresse</h3>
+                            <p>181 Avenue Habib Bourguiba Le Kram, 2015 Tunis, Tunisie</p>
+                        </div>
+                        <div class="empty-space col-xs-b25"></div>
+                        <div class="tm-single-contact">
+                            <i class="fa fa-phone"></i>
+                            <h3>Téléphone</h3>
+                            <p>+216 54 388569 <br>
+                                +216 54 090926</p>
+                        </div>
+                        <div class="empty-space col-xs-b25"></div>
+                        <div class="tm-single-contact">
+                            <i class="fa fa-envelope"></i>
+                            <h3>Email</h3>
+                            <p>contact@ishtarassistance.com<br>
+                        </div>
+                        <div class="empty-space col-xs-b25"></div>
+                    </div>
+                </div><!-- .col -->
+            </div>
+        </div>
+        <div class="empty-space col-md-b70 col-xs-b40"></div>
+    </section>
+    <!-- End Contact Section -->
+
+    <!-- Start Map Section -->
+    <div id="tm-map"></div>
+    <!-- End Map Section -->
+
+    <!-- Start Clients Section -->
+    <div class="tm-clients-wrap">
+        <div class="empty-space col-md-b100 col-xs-b70"></div>
+        <div class="container">
+            <div class="tm-clients-curosor owl-carousel">
+                <div class="tm-client"><img src="{{ asset('assets/img/client-logo-01.png') }}" alt=""></div>
+                <div class="tm-client"><img src="{{ asset('assets/img/client-logo-02.png') }}" alt=""></div>
+                <div class="tm-client"><img src="{{ asset('assets/img/client-logo-03.png') }}" alt=""></div>
+                <div class="tm-client"><img src="{{ asset('assets/img/client-logo-04.png') }}" alt=""></div>
+                <div class="tm-client"><img src="{{ asset('assets/img/client-logo-05.png') }}" alt=""></div>
+                <div class="tm-client"><img src="{{ asset('assets/img/client-logo-06.png') }}" alt=""></div>
+            </div>
+        </div>
+        <div class="empty-space col-md-b100 col-xs-b70"></div>
+    </div>
+    <!-- End Clients Section -->
+
+    <!-- Start Footer -->
+    <footer class="tm-overflow-hidden">
+        <div class="tm-gray-bg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="tm-footer-social">
+                            <h2>Suivez nous</h2>
+                            <div class="tm-footer-social-list">
+                                <a href="#" class="tm-social-btn blue">
+                                    <i class="fa fa-facebook-square"></i>
+                                    <i class="fa fa-facebook-square"></i>
+                                </a>
+                                <a href="#" class="tm-social-btn blue">
+                                    <i class="fa fa-google-plus-square"></i>
+                                    <i class="fa fa-google-plus-square"></i>
+                                </a>
+                                <a href="#" class="tm-social-btn blue">
+                                    <i class="fa fa-twitter-square"></i>
+                                    <i class="fa fa-twitter-square"></i>
+                                </a>
+                                <a href="#" class="tm-social-btn blue">
+                                    <i class="fa fa-linkedin-square"></i>
+                                    <i class="fa fa-linkedin-square"></i>
+                                </a>
+                                <a href="#" class="tm-social-btn blue">
+                                    <i class="fa fa-skype"></i>
+                                    <i class="fa fa-skype"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div><!-- .col -->
+                </div>
+            </div>
+        </div>
+        <div class="tm-site-footer">
+            <div class="container"><!-- row-md-reverce -->
+                <div class="row row-sm-reverce">
+                    <div class="col-md-7 col-lg-8">
+                        <p class="tm-copyright">Copyright © 2019 Eshter.</p>
+                    </div><!-- .col -->
+                    <div class="col-md-5 col-lg-4">
+                        <div class="tm-footer-hotline">
+                            <div class="tm-footer-hotline-in">
+                                <div class="tm-phone-icon"><i class="fa fa-mobile"></i></div>
+                                <p>+216 54 388569 <br>
+                                    +216 54 090926</p>
+                            </div>
+                        </div>
+                    </div><!-- .col -->
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer -->
+
+    <!-- Scroll Up -->
+    <div id='scrollup'></div>
+{% endblock %}

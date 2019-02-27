@@ -1,0 +1,47 @@
+<!-- Start Site Header Wrap -->
+<header>
+    <div class="tm-site-header">
+        <div class="tm-header-info-wrap">
+            <div class="container tm-header-info">
+                <a href="#"><i class="fa fa-phone"></i>+216 54 090926 / +216 54 388569</a>
+                <a href="#"><i class="fa fa-envelope"></i>contact@ishtarassistance.com</a>
+            </div>
+        </div>
+        <div class="tm-header-menu">
+            <div class="container tm-header-menu-container">
+                <div class="tm-site-branding">
+                    <a href="{{ path('homepage') }}" class="tm-logo-link index-title">
+                        <img class="tm-logo logo-header" src="{{ asset('assets/img/logos/51279125_615054338948710_3412857584078553088_n.png') }}" alt="">
+                        Eshter Assistance
+                    </a>
+                </div>
+                <nav class="tm-primary-nav">
+                    <ul class="tm-primary-nav-list">
+                        <li class="menu-item">
+                            <a href="{{ path('homepage') }}" class="nav-link ">Accueil</a>
+                        </li>
+                        <li class="menu-item menu-item-has-children"><a href="" class="nav-link">Interventions</a>
+                            <ul>
+                                {% for c in chirurgies %}
+                                    <li class="menu-item"><a href="{{ path('chirurgie_index', {'id': c.id}) }}">{{ c.name }}</a></li>
+                                {% endfor %}
+                            </ul>
+                        </li>
+                        <li class="menu-item menu-item-has-children"><a href="" class="nav-link">Séjour</a>
+                            <ul>
+                                <li class="menu-item"><a href="{{ path('procedure_index') }}">Procédure</a></li>
+                                <li class="menu-item"><a href="{{ path('clinique_index') }}">Clinique</a></li>
+                                <li class="menu-item"><a href="{{ path('hotel_index') }}">Hôtel</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-item"><a href="{{ path('tarifs_index') }}" class="nav-link">Tarifs</a></li>
+                        <li class="menu-item" id="devis_link"><a href="#" class="nav-link">Devis</a></li>
+                        <li class="menu-item"><a href="{{ path('blog_index') }}" class="nav-link">Blog</a></li>
+                        <li class="menu-item"><a href="#" id="contact_link" class="nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+            </div><!-- .tm-header-menu-container -->
+        </div><!-- .tm-header-menu -->
+    </div><!-- .tm-site-header -->
+</header>
+<!-- End Site Header Wrap -->

@@ -1,0 +1,452 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <!-- Start Preloader -->
+    <div id="tm-preloader">
+        <div id="tm-preloader-in">
+            <div></div><div></div><div></div><div></div><div></div>
+        </div>
+    </div>
+    <!-- End Preloader -->
+
+    {% include 'default/header1.html.twig' %}
+
+    <!-- Start Blog Header -->
+    <section class="tm-blog-hero" style="background-image: url('{{ asset('assets/img/clinique-larose-frozen.jpg') }}')">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="tm-blog-hero-title">Tarifs</h1>
+                    <ul class="tm-breadcrumb">
+                        <li><a href="{{ path('homepage') }}">Home</a></li>
+                        <li>Tarifs</li>
+                    </ul>
+                </div><!-- .col -->
+            </div>
+        </div>
+    </section>
+    <!-- End Blog Header -->
+
+    <!-- Start Site Content -->
+    <div class="container justify-text">
+        <div class="row justify-content-center p-5">
+            <div class="col-lg-10 col-md-10">
+                Ishtar Assistance Vous Offre Les Meilleurs Tarifs Du Marché. Pour Une Offre Adaptée Veuillez Nous Demander Un Devis
+            </div>
+            <div class="col-lg-10 col-md-10 pt-5 text-center"><h2>TARIFS</h2></div>
+            <div class="row justify-content-center col-lg-10 col-md-10 pt-5">
+                <div class="col-lg-10 col-md-10 fw-600">
+                    <table class="table table-hover table-responsive">
+                        <thead>
+                        <tr>
+                            <th colspan="3" class="text-center">Chirurgie des Seins</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">Interventions</th>
+                            <th scope="col">Prix</th>
+                            <th scope="col">Séjour</th>
+                        </tr>
+                        </thead>
+                        <tbody class="color-b">
+                        <tr>
+                            <td>Augmentation mammaire par lipofilling</td>
+                            <td>2200 €</td>
+                            <td>5 nuits / 6 jours</td>
+                        </tr>
+                        <tr>
+                            <td>Augmentation mammaire par prothèses rondes</td>
+                            <td>2400 €</td>
+                            <td>5 nuits / 6 jours</td>
+                        </tr>
+                        <tr>
+                            <td>Augmentation mammaire par prothèses anatomiques</td>
+                            <td>2500 €</td>
+                            <td>4 nuits / 5 jours</td>
+                        </tr>
+                        <tr>
+                            <td>Changement des prothèses</td>
+                            <td>2300 €</td>
+                            <td>4 nuits / 5 jours</td>
+                        </tr>
+                        <tr>
+                            <td>Réduction mammaire</td>
+                            <td>2400 €</td>
+                            <td>4 nuits / 5 jours</td>
+                        </tr>
+                        <tr>
+                            <td>Lifting mammaire</td>
+                            <td>2400 €</td>
+                            <td>4 nuits / 5 jours</td>
+                        </tr>
+                        <tr>
+                            <td>Lifting mammaire avec prothèses</td>
+                            <td>2500 €</td>
+                            <td>4 nuits / 5 jours</td>
+                        </tr>
+                        <tr>
+                            <td>Gynécomastie</td>
+                            <td>1850 €</td>
+                            <td>4 nuits / 5 jours</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="row justify-content-center col-lg-10 col-md-10 pt-5">
+                <div class="col-lg-10 col-md-10 fw-600">
+                    <table class="table table-hover table-responsive">
+                        <thead>
+                        <tr>
+                            <th colspan="3" class="text-center">Chirurgie de la Silhouette</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">Interventions</th>
+                            <th scope="col">Prix</th>
+                            <th scope="col">Séjour</th>
+                        </tr>
+                        </thead>
+                        <tbody class="color-b">
+                        <tr>
+                            <td>Augmentation mammaire par lipofilling</td>
+                            <td>2200 €</td>
+                            <td>5 nuits / 6 jours</td>
+                        </tr>
+                        <tr>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                        </tr>
+                        <tr>
+                            <td>Larry the Bird</td>
+                            <td>@twitter</td>
+                            <td>@twitter</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="row justify-content-center col-lg-10 col-md-10 pt-5">
+                <div class="col-lg-10 col-md-10 fw-600">
+                    <table class="table table-hover table-responsive">
+                        <thead>
+                        <tr>
+                            <th colspan="3" class="text-center">Chirurgie intime</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">Interventions</th>
+                            <th scope="col">Prix</th>
+                            <th scope="col">Séjour</th>
+                        </tr>
+                        </thead>
+                        <tbody class="color-b">
+                        <tr>
+                            <td>Augmentation mammaire par lipofilling</td>
+                            <td>2200 €</td>
+                            <td>5 nuits / 6 jours</td>
+                        </tr>
+                        <tr>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                        </tr>
+                        <tr>
+                            <td>Larry the Bird</td>
+                            <td>@twitter</td>
+                            <td>@twitter</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="row justify-content-center col-lg-10 col-md-10 pt-5">
+                <div class="col-lg-10 col-md-10 fw-600">
+                    <table class="table table-hover table-responsive">
+                        <thead>
+                        <tr>
+                            <th colspan="3" class="text-center">Chirurgie du visage</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">Interventions</th>
+                            <th scope="col">Prix</th>
+                            <th scope="col">Séjour</th>
+                        </tr>
+                        </thead>
+                        <tbody class="color-b">
+                        <tr>
+                            <td>Augmentation mammaire par lipofilling</td>
+                            <td>2200 €</td>
+                            <td>5 nuits / 6 jours</td>
+                        </tr>
+                        <tr>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                        </tr>
+                        <tr>
+                            <td>Larry the Bird</td>
+                            <td>@twitter</td>
+                            <td>@twitter</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="row justify-content-center col-lg-10 col-md-10 pt-5">
+                <div class="col-lg-10 col-md-10 fw-600">
+                    <table class="table table-hover table-responsive">
+                        <thead>
+                        <tr>
+                            <th colspan="3" class="text-center">Chirurgie Orthopédique</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">Interventions</th>
+                            <th scope="col">Prix</th>
+                            <th scope="col">Séjour</th>
+                        </tr>
+                        </thead>
+                        <tbody class="color-b">
+                        <tr>
+                            <td>Augmentation mammaire par lipofilling</td>
+                            <td>2200 €</td>
+                            <td>5 nuits / 6 jours</td>
+                        </tr>
+                        <tr>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                        </tr>
+                        <tr>
+                            <td>Larry the Bird</td>
+                            <td>@twitter</td>
+                            <td>@twitter</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="row justify-content-center col-lg-10 col-md-10 pt-5">
+                <div class="col-lg-10 col-md-10 fw-600">
+                    <table class="table table-hover table-responsive">
+                        <thead>
+                        <tr>
+                            <th colspan="3" class="text-center">Chirurgie de l’Obésité</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">Interventions</th>
+                            <th scope="col">Prix</th>
+                            <th scope="col">Séjour</th>
+                        </tr>
+                        </thead>
+                        <tbody class="color-b">
+                        <tr>
+                            <td>Augmentation mammaire par lipofilling</td>
+                            <td>2200 €</td>
+                            <td>5 nuits / 6 jours</td>
+                        </tr>
+                        <tr>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                        </tr>
+                        <tr>
+                            <td>Larry the Bird</td>
+                            <td>@twitter</td>
+                            <td>@twitter</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="row justify-content-center col-lg-10 col-md-10 pt-5">
+                <div class="col-lg-10 col-md-10 fw-600">
+                    <table class="table table-hover table-responsive">
+                        <thead>
+                        <tr>
+                            <th colspan="3" class="text-center">Traitement d’infertilité</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">Interventions</th>
+                            <th scope="col">Prix</th>
+                            <th scope="col">Séjour</th>
+                        </tr>
+                        </thead>
+                        <tbody class="color-b">
+                        <tr>
+                            <td>Augmentation mammaire par lipofilling</td>
+                            <td>2200 €</td>
+                            <td>5 nuits / 6 jours</td>
+                        </tr>
+                        <tr>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                        </tr>
+                        <tr>
+                            <td>Larry the Bird</td>
+                            <td>@twitter</td>
+                            <td>@twitter</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="row justify-content-center col-lg-10 col-md-10 pt-5">
+                <div class="col-lg-10 col-md-10 fw-600">
+                    <table class="table table-hover table-responsive">
+                        <thead>
+                        <tr>
+                            <th colspan="3" class="text-center">Chirurgie Dentaire</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">Interventions</th>
+                            <th scope="col">Prix</th>
+                            <th scope="col">Séjour</th>
+                        </tr>
+                        </thead>
+                        <tbody class="color-b">
+                        <tr>
+                            <td>Augmentation mammaire par lipofilling</td>
+                            <td>2200 €</td>
+                            <td>5 nuits / 6 jours</td>
+                        </tr>
+                        <tr>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                        </tr>
+                        <tr>
+                            <td>Larry the Bird</td>
+                            <td>@twitter</td>
+                            <td>@twitter</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="row justify-content-center col-lg-10 col-md-10 pt-5">
+                <div class="col-lg-10 col-md-10 fw-600">
+                    <table class="table table-hover table-responsive">
+                        <thead>
+                        <tr>
+                            <th colspan="3" class="text-center">Traitement des Yeux et Ophtalmologie</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">Interventions</th>
+                            <th scope="col">Prix</th>
+                            <th scope="col">Séjour</th>
+                        </tr>
+                        </thead>
+                        <tbody class="color-b">
+                        <tr>
+                            <td>Augmentation mammaire par lipofilling</td>
+                            <td>2200 €</td>
+                            <td>5 nuits / 6 jours</td>
+                        </tr>
+                        <tr>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                        </tr>
+                        <tr>
+                            <td>Larry the Bird</td>
+                            <td>@twitter</td>
+                            <td>@twitter</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="row justify-content-center col-lg-10 col-md-10 pt-5">
+                <div class="col-lg-10 col-md-10 fw-600">
+                    <table class="table table-hover table-responsive">
+                        <thead>
+                        <tr>
+                            <th colspan="3" class="text-center">Greffes des cheuveux</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">Interventions</th>
+                            <th scope="col">Prix</th>
+                            <th scope="col">Séjour</th>
+                        </tr>
+                        </thead>
+                        <tbody class="color-b">
+                        <tr>
+                            <td>Augmentation mammaire par lipofilling</td>
+                            <td>2200 €</td>
+                            <td>5 nuits / 6 jours</td>
+                        </tr>
+                        <tr>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                        </tr>
+                        <tr>
+                            <td>Larry the Bird</td>
+                            <td>@twitter</td>
+                            <td>@twitter</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="row justify-content-center col-lg-12 col-md-10 pt-5">
+                <div class="col-lg-5 col-md-10">
+                    <div class="row">
+                        <h4 class="text-center">LE PRIX INCLUS</h4>
+                    </div>
+                    <div class="row">
+                        <ul>
+                            <li>Hébergement à l’hôtel</li>
+                            <li>Le séjour en clinique</li>
+                            <li>l’intervention.</li>
+                            <li>Les honoraires du chirurgien et de l’anesthésiste.</li>
+                            <li>Les médicaments et soins post-opératoires effectués par l’infirmier à l’hôtel (en cas de besoin).</li>
+                            <li>Les consultations pré et post-opératoires.</li>
+                            <li>L’utilisation du bloc opératoire.</li>
+                            <li>Les transferts hôtel, clinique, chirurgien, aéroport… .</li>
+                            <li>Les prothèses</li>
+                            <li>Le soutien-gorge spécial et la gaine de contention (s’il y a lieu)</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="offset-lg-2 col-lg-5 col-md-10">
+                    <div class="row">
+                        <h4 class="text-center">LE PRIX N'INCLUS PAS</h4>
+                    </div>
+                    <div class="row">
+                        <ul>
+                            <li>Le Vol.</li>
+                            <li>Les excursions.</li>
+                            <li>L’extra d’hébergement (boissons, soins esthétiques, téléphone…)</li>
+                            <li>L’assurance voyage.</li>
+                            <li>
+                                Le paiement se fait en Tunisie, la jour de votre arrivée à la clinique.
+                                Vous n’aurez à payer que le montant qui figurera sur votre devis personnalisé.
+                            </li>
+                            <li>
+                                En cas de complication -ce qui est assez rare- et si une autre intervention
+                                s’avère nécessaire, les frais seront pris en charge par Ishtar Assistance Tunisie
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Site Content -->
+
+    {% include 'default/footer.html.twig' %}
+
+    <!-- Scroll Up -->
+    <div id='scrollup'></div>
+{% endblock %}

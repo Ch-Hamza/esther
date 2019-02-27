@@ -1,0 +1,79 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <!-- Start Preloader -->
+    <div id="tm-preloader">
+        <div id="tm-preloader-in">
+            <div></div><div></div><div></div><div></div><div></div>
+        </div>
+    </div>
+    <!-- End Preloader -->
+
+    {% include 'default/header1.html.twig' %}
+
+    <!-- Start Blog Header -->
+    <section class="tm-blog-hero">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="tm-blog-hero-title">Dr Chedi BALI</h1>
+                    <ul class="tm-breadcrumb">
+                        <li><a href="{{ path('homepage') }}">Home</a></li>
+                        <li>Dr Chedi BALI</li>
+                    </ul>
+                </div><!-- .col -->
+            </div>
+        </div>
+    </section>
+    <!-- End Blog Header -->
+
+    <!-- Start Site Content -->
+    <div class="container">
+        <div class="row justify-content-center p-5">
+            <div class="col-lg-5 col-md-8">
+                <img src="{{ asset('assets/img/doctors/11816994_949374025123225_8414511471603356866_n-600x600.jpg') }}" alt="">
+            </div>
+            <div class="col-lg-7 col-md-10">
+                <h2>Dr Chedi BALI</h2>
+                <h4 class="cv-title">Chirurgie esthétique et réparatrice</h4>
+                <p>
+                    Doctorat d’état en médecine à Tunis, Diplômé en Chirurgie
+                    Plastique Reconstructrice et Esthétique, Inscrit au Conseil National de l’Ordre des médecins.
+                </p>
+                <p>Membre de la Société Tunisienne de Chirurgie Plastique Reconstructrice et Esthétique</p>
+                <p>Membre de la Société Tunisienne de Chirurgie de la Main</p>
+                <p>Auteur de plusieurs publications dans des revues internationales</p>
+                <p>Contribue à l’enseignement post-universitaire</p>
+                <p>Membre du bureau de la société tunisienne de chirurgie plastique reconstructrice et esthétique STCPRE</p>
+                <p>Participe de façon régulière aux congrès nationaux et internationaux</p>
+            </div>
+        </div>
+        <div class="row pl-5">
+            <h4 class="cv-title col-10">Formations</h4>
+            <ul class="col-10">
+                <li>Internat en chirurgie plastique à l’Institut Kassab de Tunis Pr BAHRI.</li>
+                <li>Internat en chirurgie maxillo-faciale à Tunis et à Sfax.</li>
+                <li>Hôpital Saint Louis Paris : Service de chirurgie plastique reconstructrice et esthétique (Pr Servant J-M)</li>
+                <li>Clinique des Princes, Paris 16 : Chirurgie plastique de la face (Pr D. Marchac)</li>
+                <li>Clinique Bizet Paris 16 : Chirurgie plastique de l’oreille (Dr F. Firmin)</li>
+            </ul>
+        </div>
+        <div class="row pb-5 pl-5">
+            <h4 class="cv-title col-10">Expériences professionnelles</h4>
+            <div class="col-10">Ancien Résident en Chirurgie Plastique, Reconstructrice et Esthétique avec :</div>
+            <ul class="col-10">
+                <li>Clinique Jeanne d’Arc (Nantes)</li>
+                <li>Clinique Jouvenet (Paris 16)</li>
+                <li>Institut Européen de chirurgie Esthétique et Plastique (Paris 16)</li>
+                <li>ATLAS Médical (Tunis)</li>
+                <li>Clinique ELAMEN (Tunis)</li>
+            </ul>
+        </div>
+    </div>
+    <!-- End Site Content -->
+
+    {% include 'default/footer.html.twig' %}
+
+    <!-- Scroll Up -->
+    <div id='scrollup'></div>
+{% endblock %}

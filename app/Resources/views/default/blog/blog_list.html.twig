@@ -1,0 +1,92 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <!-- Start Preloader -->
+    <div id="tm-preloader">
+        <div id="tm-preloader-in">
+            <div></div><div></div><div></div><div></div><div></div>
+        </div>
+    </div>
+    <!-- End Preloader -->
+
+    {% include 'default/header1.html.twig' %}
+
+    <!-- Start Blog Header -->
+    <section class="tm-blog-hero">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="tm-blog-hero-title">Blog</h1>
+                    <ul class="tm-breadcrumb">
+                        <li><a href="{{ path('homepage') }}">Home</a></li>
+                        <li>Blog</li>
+                    </ul>
+                </div><!-- .col -->
+            </div>
+        </div>
+    </section>
+    <!-- End Blog Header -->
+
+    <div class="tm-blog-section tm-blog-right-sidebar">
+        <div class="empty-space col-md-b100 col-xs-b70"></div>
+        <div class="container">
+            <div class="row">
+                <main class="col-xl-12">
+                    <div class="tm-site-main">
+                        <article class="tm-post">
+                            <header class="tm-entry-header">
+                                <div class="tm-post-thumb  row justify-content-center">
+                                    <img src="{{ asset('assets/img/blog/Design-7.png') }}" alt="">
+                                </div>
+                                <div class="tm-post-details-wrap">
+                                    <h2 class="tm-entry-title"><a href="{{ path('blog_details_index') }}">Ishtar Assistance : Leader dans la chirurgie esthétique en Tunisie</a></h2>
+                                </div>
+                            </header>
+                            <div class="tm-entry-content">
+                                <p>
+                                    Ishtar Assistance : Leader dans la chirurgie esthétique en Tunisie Depuis sa création,
+                                    Ishtar Assistance a fait des succès énormes dans le monde de la chirurgie esthétique
+                                    en attirant les patients, surtout européens. Ces succès lui ont permis d’être le leader
+                                    en Tunisie. Découvrons ensemble les raisons de ces gloires. La Tunisie : une destination
+                                    touristique pour toujours Depuis des années, la Tunisie a été toujours considérée comme
+                                    étant une destination
+                                </p>
+                            </div>
+                            <div class="empty-space col-xs-b30"></div>
+                            <a href="{{ path('blog_details_index') }}" class="tm-btn1">LIRE LA SUITE</a>
+                        </article>
+                        <article class="tm-post">
+                            <header class="tm-entry-header">
+                                <div class="tm-post-thumb  row justify-content-center">
+                                    <img src="{{ asset('assets/img/logos/51064643_2210866862506804_2880550246629244928_n.png') }}" alt="">
+                                </div>
+                                <div class="tm-post-details-wrap">
+                                    <h2 class="tm-entry-title"><a href="{{ path('blog_details1_index') }}">Nos Garanties</a></h2>
+                                </div>
+                            </header>
+                            <div class="tm-entry-content">
+                                <p>
+                                    Ishtar Assistance Tunisie est une plateforme qui propose aux patients venant des quatre coins
+                                    du monde une prise en charge complète de leur séjour médical. L’objectif étant de simplifier
+                                    la venue des patients en leur offrant l’accueil, le transport et le logement dans les hôtels
+                                    les plus prestigieux de la capitale. Pour assurer à chaque patient les meilleurs soins possibles
+                                    aux prix les plus bas en Tunisie, Ishtar Assistance Tunisie collabore avec des cliniques récentes,
+                                    renommées et à la pointe de
+                                </p>
+                            </div>
+                            <div class="empty-space col-xs-b30"></div>
+                            <a href="{{ path('blog_details1_index') }}" class="tm-btn1">LIRE LA SUITE</a>
+                        </article>
+                    </div>
+                </main>
+            </div>
+        </div>
+        <div class="empty-space col-md-b100 col-xs-b70"></div>
+    </div>
+    <!-- End Site Content -->
+
+    {% include 'default/footer.html.twig' %}
+
+    <!-- Scroll Up -->
+    <div id='scrollup'></div>
+{% endblock %}

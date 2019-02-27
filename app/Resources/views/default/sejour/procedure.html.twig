@@ -1,0 +1,171 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <!-- Start Preloader -->
+    <div id="tm-preloader">
+        <div id="tm-preloader-in">
+            <div></div><div></div><div></div><div></div><div></div>
+        </div>
+    </div>
+    <!-- End Preloader -->
+
+    {% include 'default/header1.html.twig' %}
+
+    <!-- Start Blog Header -->
+    <section class="tm-blog-hero">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="tm-blog-hero-title">Procédure</h1>
+                    <ul class="tm-breadcrumb">
+                        <li><a href="{{ path('homepage') }}">Home</a></li>
+                        <li>Procédure</li>
+                    </ul>
+                </div><!-- .col -->
+            </div>
+        </div>
+    </section>
+    <!-- End Blog Header -->
+
+    <!-- Start Site Content -->
+    <div class="container justify-text">
+        <div class="row justify-content-center p-5">
+            <div class="col-lg-10 col-md-10">
+                Ishtar Assistance travaille avec des standards internationaux.
+                Afin de garantir une qualité de service optimale nous travaillons
+                avec un système de procédure préétablie garantissant un suivi rigoureux
+                et détaillé de votre séjour et soins.
+            </div>
+            <div class="row justify-content-center col-lg-10 col-md-10 p-5">
+                <h2>Détails</h2>
+                <div id="accordion">
+                    <div class="card">
+                        <div class="card-header">
+                            <a class="card-link" data-toggle="collapse" href="#collapseOne">
+                                Etape 1: Le premier contact
+                            </a>
+                        </div>
+                        <div id="collapseOne" class="collapse show" data-parent="#accordion">
+                            <div class="card-body">
+                                Ishtar Assistance met à votre disposition un site internet, un e-mail,
+                                un numéro de téléphone et une page Facebook pour nous contacter et nous
+                                adresser vos demandes. Vous pourrez décrire vos pathologies, vos douleurs
+                                et nous soumettre votre dossier médical que nous transmettrons à un spécialiste.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo">
+                                Etape 2: Envoi de l'offre de soin et de la prise en charge
+                            </a>
+                        </div>
+                        <div id="collapseTwo" class="collapse" data-parent="#accordion">
+                            <div class="card-body">
+                                Avec le diagnostic du chirurgien, nous vous faisons parvenir une proposition de soins complète :
+                                <ul>
+                                    <li>Le descriptif de votre séjour à l’hôpital</li>
+                                    <li>Le descriptif de vos soins de suite si nécessaire</li>
+                                    <li>Notre offre touristique personnalisée</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <a class="collapsed card-link" data-toggle="collapse" href="#collapseThree">
+                                Etape 3: La planification de votre arrivée
+                            </a>
+                        </div>
+                        <div id="collapseThree" class="collapse" data-parent="#accordion">
+                            <div class="card-body">
+                                <p>Une fois votre billet d’avion acheté, nous déterminons ensemble les dates et modalités de votre séjour.</p>
+                                <p>Nous planifions ensemble votre rendez-vous de consultation médicale avec votre chirurgien.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <a class="collapsed card-link" data-toggle="collapse" href="#collapse4">
+                                Etape 4: L'arrivée et le transport
+                            </a>
+                        </div>
+                        <div id="collapse4" class="collapse" data-parent="#accordion">
+                            <div class="card-body">
+                                <p>Dès votre arrivée à l’aéroport, nous vous prenons en charge ainsi que vos proches.</p>
+                                <p>
+                                    Un assistant vous accueillera avec une pancarte mentionnant votre nom,
+                                    il sera votre accompagnant et sera à votre disposition tout au long de votre séjour.
+                                </p>
+                                <p>Il vous conduira jusqu’à la clinique et saura répondre à toutes vos questions concernant le séjour.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <a class="collapsed card-link" data-toggle="collapse" href="#collapse5">
+                                Etape 5: L'hospitalisation
+                            </a>
+                        </div>
+                        <div id="collapse5" class="collapse" data-parent="#accordion">
+                            <div class="card-body">
+                                <p>Nous veillerons à votre installation dans la clinique et faciliterons la partie administrative.</p>
+                                <p>Nous serons présents lors de la visite du médecin et répondrons à toutes vos questions.</p>
+                                <p>Avant l’intervention, nous nous assurerons votre bien-être en vous offrant le meilleur service et en assistant vos accompagnants.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <a class="collapsed card-link" data-toggle="collapse" href="#collapse6">
+                                Etape 6: La convalescence
+                            </a>
+                        </div>
+                        <div id="collapse6" class="collapse" data-parent="#accordion">
+                            <div class="card-body">
+                                <p>
+                                    Après l’intervention, nous nous assurons que tout s’est parfaitement déroulé. Pour la suite de votre convalescence,
+                                    nous vous accompagnerons dans un hôtel prestigieux ou règne luxe, calme et détente.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <a class="collapsed card-link" data-toggle="collapse" href="#collapse7">
+                                Etape 7: Le départ
+                            </a>
+                        </div>
+                        <div id="collapse7" class="collapse" data-parent="#accordion">
+                            <div class="card-body">
+                                <p>A la fin de votre séjour médical, l’assistant vous accompagnera jusqu’à l’aéroport et s’assurera de votre embarquement.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <a class="collapsed card-link" data-toggle="collapse" href="#collapse8">
+                                Etape 8: Le suivi à distance
+                            </a>
+                        </div>
+                        <div id="collapse8" class="collapse" data-parent="#accordion">
+                            <div class="card-body">
+                                <p>
+                                    Dès votre retour à votre domicile vous disposez de tous les éléments de contact
+                                    pour nous faire part de vos remarques ou de vos questions.
+                                </p>
+                                <p>Nous serons toujours à l’écoute et répondront à toutes vos demandes.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Site Content -->
+
+    {% include 'default/footer.html.twig' %}
+
+    <!-- Scroll Up -->
+    <div id='scrollup'></div>
+{% endblock %}

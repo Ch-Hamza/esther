@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="eshter">
+        <title>{% block title %}Eshter Assistance{% endblock %}</title>
+        {% block stylesheets %}
+            <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/plugins.css') }}">
+            <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/style.css') }}">
+            <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}">
+        {% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('assets/img/logos/50780487_596810034105682_4459185907433472000_n_28I_icon.ico') }}" />
+    </head>
+    <body data-spy="scroll" data-target=".tm-primary-nav">
+        {% block body %}{% endblock %}
+        {% block javascripts %}
+            <script src="{{ asset('assets/js/vendor/modernizr-3.5.0.min.js') }}"></script>
+            <script src="{{ asset('assets/js/vendor/jquery-1.12.4.min.js') }}"></script>
+            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBgwgIuDRkO7HlxvpWN-vPePnGVWss5r5g"></script>
+            <script src="{{ asset('assets/js/plugins.js') }}"></script>
+            <script src="{{ asset('assets/js/main.js') }}"></script>
+            <script>
+                $("#devis_link").click(function(event){
+                    event.preventDefault();
+                    $('#uname').focus();
+                });
+                $("#contact_link").click(function(event){
+                    event.preventDefault();
+                    $('#name').focus();
+                });
+            </script>
+        {% endblock %}
+    </body>
+</html>

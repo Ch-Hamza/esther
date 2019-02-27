@@ -1,0 +1,101 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <!-- Start Preloader -->
+    <div id="tm-preloader">
+        <div id="tm-preloader-in">
+            <div></div><div></div><div></div><div></div><div></div>
+        </div>
+    </div>
+    <!-- End Preloader -->
+
+    {% include 'default/header1.html.twig' %}
+
+    <!-- Start Blog Header -->
+    <section class="tm-blog-hero">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="tm-blog-hero-title">DR ZIED MABROUKI</h1>
+                    <ul class="tm-breadcrumb">
+                        <li><a href="{{ path('homepage') }}">Home</a></li>
+                        <li>Dr Zied MABROUKI</li>
+                    </ul>
+                </div><!-- .col -->
+            </div>
+        </div>
+    </section>
+    <!-- End Blog Header -->
+
+    <!-- Start Site Content -->
+    <div class="container">
+        <div class="row justify-content-center p-5">
+            <div class="col-lg-5 col-md-8">
+                <img src="{{ asset('assets/img/doctors/0.jpg') }}" alt="">
+            </div>
+            <div class="col-lg-7 col-md-10">
+                <h2>Dr Zied MABROUKI</h2>
+                <h4 class="cv-title">Chirurgie Plastique Réparatrice et Esthétique</h4>
+
+                Né le 22/06/1979 à Monastir – Tunisie
+                Nationalité : Tunisienne
+
+                <h4 class="cv-title">Parcours Académique</h4>
+                <ul>
+                    <li>Etudes primaires : Ecole Cité Waheb ; La Chebba – Tunisie</li>
+                    <li>Etudes secondaires : Lycée Technique Sfax – Tunisie</li>
+                    <li>Baccalauréat 1997 (Section mathématiques)</li>
+                    <li>Etudes de Médecine : Faculté de médecine de Sfax 1997-2004</li>
+                    <li>Lauréat du concours national de résidanat 2004</li>
+                    <li>
+                        Ancien Résident des hôpitaux de Tunis en chirurgie plastique réparatrice et esthétique
+                        et chirurgie de la main 2005-2008
+                    </li>
+                    <li>
+                        Doctorat en médecine 2008 (très honorable avec félicitations du jury et proposition au prix national
+                        de thèses de doctorat) – Inscrit au conseil national de l’ordre des médecins sous le numéro : 17682
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row justify-content-center p-5">
+            <ul>
+                <li>Ancien Interne des hôpitaux de Paris 2008-2011</li>
+                <li>Diplôme d’anatomie appliquée à la chirurgie plastique réparatrice et esthétique de l’université Paris V 2009</li>
+                <li>Diplôme d’anatomie appliquée à la chirurgie plastique de la tête et du cou de l’université Paris V 2010</li>
+                <li>Diplôme de microchirurgie de l’école de chirurgie de Paris 2010</li>
+                <li>Diplôme de chirurgie de la main et du membre supérieur de l’université Paris VII 2010</li>
+                <li>
+                    Diplôme de spécialiste en chirurgie plastique réparatrice et esthétique et de chirurgie de la main 2010
+                </li>
+                <li>
+                    Professeur Assistant Hospitalo-universitaire à la Faculté de Médecine de Tunis en chirurgie plastique
+                    réparatrice et esthétique et chirurgie de la main exerçant à l’institut Kassab de Tunis 2011-2018
+                </li>
+                <li>Conseiller chargé de mission au cabinet de la ministre de la santé 2017</li>
+
+                <h4 class="cv-title">Activités Scientifiques :</h4>
+                <ul>
+                    <li>Directeur scientifique de la Société Tunisienne de Chirurgie Esthétique</li>
+                    <li>Secrétaire général adjoint de la Société Tunisienne de Chirurgie de la Main</li>
+                    <li>Membre de la Société Tunisienne de Chirurgie Plastique réparatrice et esthétique</li>
+                    <li>Directeur scientifique du Congres Franco-Maghrébin de chirurgie de la Main 2015</li>
+                    <li>Multiples Travaux et publications scientifiques</li>
+                </ul>
+
+                <h4 class="cv-title">Activités Sociales et humanitaires :</h4>
+                <ul>
+                    <li>Participation à des caravanes de santé (missions humanitaires) nationales et internationales</li>
+                    <li>Membre de l’association tunisienne de lutte contre les maladies sexuellement transmissibles et le SIDA 1998-2004</li>
+                    <li>Médecin en chef de la section Handball de l’Espérance sportive de Tunis (Bénévole) 2012-2014 et 2018-2019</li>
+                </ul>
+            </ul>
+        </div>
+    </div>
+    <!-- End Site Content -->
+
+    {% include 'default/footer.html.twig' %}
+
+    <!-- Scroll Up -->
+    <div id='scrollup'></div>
+{% endblock %}

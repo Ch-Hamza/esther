@@ -1,0 +1,94 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <!-- Start Preloader -->
+    <div id="tm-preloader">
+        <div id="tm-preloader-in">
+            <div></div><div></div><div></div><div></div><div></div>
+        </div>
+    </div>
+    <!-- End Preloader -->
+
+    {% include 'default/header1.html.twig' %}
+
+    <!-- Start Blog Header -->
+    <section class="tm-blog-hero" style="background-image: url('{{ vich_uploader_asset(chirurgie,'backimageFile') }}')">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="tm-blog-hero-title">{{ chirurgie.name }}</h1>
+                    <ul class="tm-breadcrumb">
+                        <li><a href="{{ path('homepage') }}">Home</a></li>
+                        <li>{{ chirurgie.name }}</li>
+                    </ul>
+                </div><!-- .col -->
+            </div>
+        </div>
+    </section>
+    <!-- End Blog Header -->
+
+    <!-- Start Site Content -->
+    <div class="container justify-text">
+        <div class="row justify-content-center p-5">
+            <div class="col-lg-10 col-md-10">
+                {{ chirurgie.details|raw }}
+            </div>
+            <div class="row justify-content-center col-lg-8 col-md-8 p-5">
+                <img src="{{ vich_uploader_asset(chirurgie,'baimageFile') }}" alt="">
+            </div>
+            <div class="col-lg-10 col-md-10 pt-5">
+                {{ chirurgie.details1|raw }}
+            </div>
+
+            <div class="row justify-content-center col-lg-8 col-md-8 p-5">
+                <img src="{{ vich_uploader_asset(chirurgie,'detailsimageFile') }}" alt="">
+            </div>
+
+            <div class="col-lg-10 col-md-10 pt-5">
+                {{ chirurgie.details2|raw }}
+            </div>
+
+            <div class="col-lg-10 col-md-10 pt-5">
+                {{ chirurgie.beforeOperation|raw }}
+            </div>
+
+            <div class="row justify-content-center col-lg-8 col-md-8 p-5">
+                <img src="{{ vich_uploader_asset(chirurgie,'detailsimageFile2') }}" alt="">
+            </div>
+
+            <div class="col-lg-10 col-md-10 pt-5">
+                {{ chirurgie.beforeOperation1|raw }}
+            </div>
+
+            <div class="row justify-content-center col-lg-8 col-md-8 p-5">
+                <img src="{{ vich_uploader_asset(chirurgie,'detailsimageFile3') }}" alt="">
+            </div>
+
+            <div class="col-lg-10 col-md-10 pt-5">
+                {{ chirurgie.afterOperation|raw }}
+            </div>
+
+            <div class="col-lg-10 col-md-10 pt-5">
+                {{ chirurgie.afterOperation1|raw }}
+            </div>
+
+            <div class="col-lg-10 col-md-10 pt-5">
+                {{ chirurgie.complications|raw }}
+            </div>
+
+            <div class="col-lg-10 col-md-10 pt-5">
+                {{ chirurgie.complications1|raw }}
+            </div>
+
+            <div class="col-lg-10 col-md-10 pt-5">
+                {{ chirurgie.tarifs|raw }}
+            </div>
+        </div>
+    </div>
+    <!-- End Site Content -->
+
+    {% include 'default/footer.html.twig' %}
+
+    <!-- Scroll Up -->
+    <div id='scrollup'></div>
+{% endblock %}
