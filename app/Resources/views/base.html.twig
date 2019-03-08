@@ -24,10 +24,12 @@
             <script>
                 $("#devis_link").click(function(event){
                     event.preventDefault();
+                    window.location.replace("{{ path('homepage') }}#appointment");
                     $('#uname').focus();
                 });
                 $("#contact_link").click(function(event){
                     event.preventDefault();
+                    window.location.replace("{{ path('homepage') }}#contact");
                     $('#name').focus();
                 });
             </script>
