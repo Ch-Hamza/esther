@@ -30,59 +30,89 @@
     <!-- Start Site Content -->
     <div class="container justify-text">
         <div class="row justify-content-center p-5">
+            {% if(chirurgie.details) %}
             <div class="col-lg-10 col-md-10">
                 {{ chirurgie.details|raw }}
             </div>
+            {% endif %}
+
+            {% if(chirurgie.baimage) %}
             <div class="row justify-content-center col-lg-8 col-md-8 p-5">
                 <img src="{{ vich_uploader_asset(chirurgie,'baimageFile') }}" alt="">
             </div>
+            {% endif %}
+
+            {% if(chirurgie.details1) %}
             <div class="col-lg-10 col-md-10 pt-5">
                 {{ chirurgie.details1|raw }}
             </div>
+            {% endif %}
 
+            {% if(chirurgie.detailsimage) %}
             <div class="row justify-content-center col-lg-8 col-md-8 p-5">
                 <img src="{{ vich_uploader_asset(chirurgie,'detailsimageFile') }}" alt="">
             </div>
+            {% endif %}
 
+            {% if(chirurgie.details2) %}
             <div class="col-lg-10 col-md-10 pt-5">
                 {{ chirurgie.details2|raw }}
             </div>
+            {% endif %}
 
+            {% if(chirurgie.beforeOperation) %}
             <div class="col-lg-10 col-md-10 pt-5">
                 {{ chirurgie.beforeOperation|raw }}
             </div>
+            {% endif %}
 
+            {% if(chirurgie.detailsimage2) %}
             <div class="row justify-content-center col-lg-8 col-md-8 p-5">
                 <img src="{{ vich_uploader_asset(chirurgie,'detailsimageFile2') }}" alt="">
             </div>
+            {% endif %}
 
+            {% if(chirurgie.beforeOperation1) %}
             <div class="col-lg-10 col-md-10 pt-5">
                 {{ chirurgie.beforeOperation1|raw }}
             </div>
+            {% endif %}
 
+            {% if(chirurgie.detailsimage3) %}
             <div class="row justify-content-center col-lg-8 col-md-8 p-5">
                 <img src="{{ vich_uploader_asset(chirurgie,'detailsimageFile3') }}" alt="">
             </div>
+            {% endif %}
 
+            {% if(chirurgie.afterOperation) %}
             <div class="col-lg-10 col-md-10 pt-5">
                 {{ chirurgie.afterOperation|raw }}
             </div>
+            {% endif %}
 
+            {% if(chirurgie.afterOperation1) %}
             <div class="col-lg-10 col-md-10 pt-5">
                 {{ chirurgie.afterOperation1|raw }}
             </div>
+            {% endif %}
 
+            {% if(chirurgie.complications) %}
             <div class="col-lg-10 col-md-10 pt-5">
                 {{ chirurgie.complications|raw }}
             </div>
+            {% endif %}
 
+            {% if(chirurgie.complications1) %}
             <div class="col-lg-10 col-md-10 pt-5">
                 {{ chirurgie.complications1|raw }}
             </div>
+            {% endif %}
 
+            {% if(chirurgie.tarifs) %}
             <div class="col-lg-10 col-md-10 pt-5">
                 {{ chirurgie.tarifs|raw }}
             </div>
+            {% endif %}
         </div>
     </div>
     <!-- End Site Content -->
