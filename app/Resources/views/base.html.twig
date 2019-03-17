@@ -17,7 +17,8 @@
         {% block body %}{% endblock %}
         {% block javascripts %}
             <script src="{{ asset('assets/js/vendor/modernizr-3.5.0.min.js') }}"></script>
-            <script src="{{ asset('assets/js/vendor/jquery-1.12.4.min.js') }}"></script>
+            <!--script src="{{ asset('assets/js/vendor/jquery-1.12.4.min.js') }}"></script-->
+            <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
             <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBgwgIuDRkO7HlxvpWN-vPePnGVWss5r5g"></script>
             <script src="{{ asset('assets/js/plugins.js') }}"></script>
             <script src="{{ asset('assets/js/main.js') }}"></script>
@@ -33,6 +34,359 @@
                     $('#name').focus();
                 });
             </script>
+
+        <script>
+            $(document).ready(function () {
+                var gArray = {
+                    'chirurgie des seins': [
+                        'Augmentation mammaire par prothèse mammaires rondes',
+                        'Augmentation mammaire par prothèse mammaires anatomiques',
+                        'Augmentation mammaire par lipofilling',
+                        'Lifting mammaire',
+                        'Réduction mammaire',
+                        'Gynécomastie',
+                        'Lifting mammaire avec prothèses'
+                    ],
+                    'chirurgie du visage': [
+                        'Lifting cervico-facial',
+                        'Lifting malaire',
+                        'Lifting frontal',
+                        'Lifting complet',
+                        'Lipofilling du visage',
+                        'Rhinoplastie simple',
+                        'Rhinoplastie et septoplastie',
+                        'Rhinoplastie ethnique',
+                        'Blépharoplastie 2 paupiéres',
+                        'Blépharoplastie 4 paupiéres',
+                        'L\'implant capillaire par FUE',
+                        'Génioplastie',
+                        'Génioplastie d\'avancement',
+                        'Otoplastie',
+                        'Augmentation des lèvres'
+                    ],
+                    'chirurgie de la silhouette': [
+                        'Liposuccion une seule zone (ventre...)',
+                        'Liposuccion sur une petite zone (double menton...)',
+                        'Liposuccion double menton + mini lifting',
+                        'Liposuccion moyenne (sur 3 zones et plus)',
+                        'Liposuccion complète (plus de 10 zones)',
+                        'Abdominoplastie',
+                        'Abdominoplastie + Liposuccion moyenne',
+                        'Lifting des bras',
+                        'Augmentation des fesses par implants fessiers',
+                        'Augmentation des fesses par lipofilling',
+                        'Liposuccion moyenne + Lipofilling des seins',
+                        'Liposuccion moyenne + Lipofilling des fesses',
+                        'Lifting des cuisses'
+                    ],
+                    'chirurgie intime': [
+                        'Nymphoplastie (réduction des lèvres vaginale)',
+                        'Pénoplastie d\'élargissement (élargissement du pénis)',
+                        'Pénoplastie d\'allongement (allongement du pénis)'
+                    ],
+                    'chirurgie orthopédique': [
+                        'Prothèse totale du genou',
+                        'Hernie discale',
+                        'Prothèse totale de la hanche',
+                        'Hallux Valgus',
+                        'Syndrome du canal carpien'
+                    ],
+                    'chirurgie de l\'obésité': [
+                        'Anneau gastrique',
+                        'Sleeve gastrectomie',
+                        'Bypass'
+                    ],
+                    'chirurgie capillaire': [
+                        'Greffe Capillaire',
+                        'Epilation Laser'
+                    ],
+                    'chirurgie de l\'infertilité': [
+                        'Insémination artificielle',
+                        'Fécondation in vitro',
+                        'Biopsie testiculaire'
+                    ],
+                    'chirurgie dentaire': [
+                        'Implant dentaire',
+                        'Pose de facette dentaire',
+                        'Blanchiment dentaire'
+                    ],
+                    'chirurgie ophtalmologie': [
+                        'Lasik (les 2 yeux)',
+                        'Laser PKR (les 2 yeux)'
+                    ]
+                };
+
+                $("#devis_typeChirurgie").on('change', function () {
+
+                    var val = $("#devis_typeChirurgie").val();
+                    if (val === "Autre") {
+                        $('#devis_chirurgie').hide();
+                        $('#devis_autreDetails').show();
+                    }
+                    else {
+                        var lArray;
+                        $('#devis_chirurgie').show();
+                        $('#devis_autreDetails').hide();
+
+                        if (val === "chirurgie des seins") {
+                            lArray = gArray['chirurgie des seins'];
+                        } else if (val === "chirurgie du visage") {
+                            lArray = gArray['chirurgie du visage'];
+                        } else if (val === "chirurgie de la silhouette") {
+                            lArray = gArray['chirurgie de la silhouette'];
+                        } else if (val === "chirurgie intime") {
+                            lArray = gArray['chirurgie intime'];
+                        } else if (val === "chirurgie orthopédique") {
+                            lArray = gArray['chirurgie orthopédique'];
+                        } else if (val === "chirurgie de l'obésité") {
+                            lArray = gArray['chirurgie de l\'obésité'];
+                        } else if (val === "chirurgie capillaire") {
+                            lArray = gArray['chirurgie capillaire'];
+                        } else if (val === "chirurgie de l'infertilité") {
+                            lArray = gArray['chirurgie de l\'infertilité'];
+                        } else if (val === "chirurgie dentaire") {
+                            lArray = gArray['chirurgie dentaire'];
+                        } else if (val === "chirurgie ophtalmologie") {
+                            lArray = gArray['chirurgie ophtalmologie'];
+                        }
+                        $('#devis_chirurgie').find('option').each(function () {
+                            $(this).hide();
+                            //console.log(gArray['chirurgie des seins']);
+                            //console.log(lArray);
+                            if(isInArray($(this).val(), lArray)) {
+                                $(this).show();
+                                //console.log($(this).val());
+                            }
+                        });
+                        $('#devis_chirurgie').val(lArray[0]);
+                    }
+                });
+                $("#devis_typeChirurgie").trigger("change");
+            });
+        </script>
+
+            <!--script>
+                $(document).ready(function () {
+                    $("#form_devis").find('form').on('submit', function () {
+                        var value_sub = $("#devis_chirurgie").val();
+                        console.log(value_sub);
+                        /*if($("#devis_typeChirurgie").val() === "autre")
+                        $("#devis_chirurgie").val(value_sub);*/
+                    });
+
+                    var origin = $("#devis_chirurgie");
+                    $("#devis_typeChirurgie").on('change', function () {
+                        var val = $(this).val();
+                        if (val === "Autre") {
+                            $("#devis_chirurgie").replaceWith(
+                                '<input type="text" id="devis_chirurgie" placeholder="Tell us what you want" class="form-control tm-form-field input-no-borders">'
+                            );
+                        }else
+                        {
+                            $("#devis_chirurgie").replaceWith(origin);
+                            if (val === "chirurgie des seins") {
+                                $("#devis_chirurgie").html(
+                                    '<option value="Augmentation mammaire par prothèse mammaires rondes">'
+                                    +'Augmentation mammaire par prothèse mammaires rondes'
+                                    +'</option>'
+                                    +'<option value="Augmentation mammaire par prothèse mammaires anatomiques">'
+                                    +'Augmentation mammaire par prothèse mammaires anatomiques'
+                                    +'</option>'
+                                    +'<option value="Augmentation mammaire par lipofilling">'
+                                    +'Augmentation mammaire par lipofilling'
+                                    +'</option>'
+                                    +'<option value="Lifting mammaire">'
+                                    +'Lifting mammaire'
+                                    +'</option>'
+                                    +'<option value="Réduction mammaire">'
+                                    +'Réduction mammaire'
+                                    +'</option>'
+                                    +'<option value="Gynécomastie">'
+                                    +'Gynécomastie'
+                                    +'</option>'
+                                    +'<option value="Lifting mammaire avec prothèses">'
+                                    +'Lifting mammaire avec prothèses'
+                                    +'</option>'
+                                );
+                            } else if (val === "chirurgie du visage") {
+                                $("#devis_chirurgie").html(
+                                    '<option value="Lifting cervico-facial">'
+                                    +'Lifting cervico-facial'
+                                    +'</option>'
+                                    +'<option value="Lifting malaire">'
+                                    +'Lifting malaire'
+                                    +'</option>'
+                                    +'<option value="Lifting frontal">'
+                                    +'Lifting frontal'
+                                    +'</option>'
+                                    +'<option value="Lifting complet">'
+                                    +'Lifting complet'
+                                    +'</option>'
+                                    +'<option value="Lipofilling du visage">'
+                                    +'Lipofilling du visage'
+                                    +'</option>'
+                                    +'<option value="Rhinoplastie simple">'
+                                    +'Rhinoplastie simple'
+                                    +'</option>'
+                                    +'<option value="Rhinoplastie et septoplastie">'
+                                    +'Rhinoplastie et septoplastie'
+                                    +'</option>'
+                                    +'<option value="Rhinoplastie ethnique">'
+                                    +'Rhinoplastie ethnique'
+                                    +'</option>'
+                                    +'<option value="Blépharoplastie 2 paupiéres">'
+                                    +'Blépharoplastie 2 paupiéres'
+                                    +'</option>'
+                                    +'<option value="Blépharoplastie 4 paupiéres">'
+                                    +'Blépharoplastie 4 paupiéres'
+                                    +'</option>'
+                                    +'<option value="L\'implant capillaire par FUE">'
+                                    +'L\'implant capillaire par FUE'
+                                    +'</option>'
+                                    +'<option value="Génioplastie">'
+                                    +'Génioplastie'
+                                    +'</option>'
+                                    +'<option value="Génioplastie d\'avancement">'
+                                    +'Génioplastie d\'avancement'
+                                    +'</option>'
+                                    +'<option value="Otoplastie">'
+                                    +'Otoplastie'
+                                    +'</option>'
+                                    +'<option value="Augmentation des lèvres">'
+                                    +'Augmentation des lèvres'
+                                    +'</option>'
+                                );
+                            } else if (val === "chirurgie de la silhouette") {
+                                $("#devis_chirurgie").html(
+                                    +'<option value="Liposuccion une seule zone (ventre...)">'
+                                    +'Liposuccion une seule zone (ventre...)'
+                                    +'</option>'
+                                    +'<option value="Liposuccion sur une petite zone (double menton...)">'
+                                    +'Liposuccion sur une petite zone (double menton...)'
+                                    +'</option>'
+                                    +'<option value="Liposuccion double menton + mini lifting">'
+                                    +'Liposuccion double menton + mini lifting'
+                                    +'</option>'
+                                    +'<option value="Liposuccion moyenne (sur 3 zones et plus)">'
+                                    +'Liposuccion moyenne (sur 3 zones et plus)'
+                                    +'</option>'
+                                    +'<option value="Liposuccion complète (plus de 10 zones)">'
+                                    +'Liposuccion complète (plus de 10 zones)'
+                                    +'</option>'
+                                    +'<option value="Abdominoplastie">'
+                                    +'Abdominoplastie'
+                                    +'</option>'
+                                    +'<option value="Abdominoplastie + Liposuccion moyenne">'
+                                    +'Abdominoplastie + Liposuccion moyenne'
+                                    +'</option>'
+                                    +'<option value="Lifting des bras">'
+                                    +'Lifting des bras'
+                                    +'</option>'
+                                    +'<option value="Augmentation des fesses par implants fessiers">'
+                                    +'Augmentation des fesses par implants fessiers'
+                                    +'</option>'
+                                    +'<option value="Augmentation des fesses par lipofilling">'
+                                    +'Augmentation des fesses par lipofilling'
+                                    +'</option>'
+                                    +'<option value="Liposuccion moyenne + Lipofilling des seins">'
+                                    +'Liposuccion moyenne + Lipofilling des seins'
+                                    +'</option>'
+                                    +'<option value="Liposuccion moyenne + Lipofilling des fesses">'
+                                    +'Liposuccion moyenne + Lipofilling des fesses'
+                                    +'</option>'
+                                    +'<option value="Lifting des cuisses">'
+                                    +'Lifting des cuisses'
+                                    +'</option>'
+                                );
+                            } else if (val === "chirurgie intime") {
+                                $("#devis_chirurgie").html(
+                                    '<option value="Nymphoplastie (réduction des lèvres vaginale)">'
+                                    +'Nymphoplastie (réduction des lèvres vaginale)'
+                                    +'</option>'
+                                    +'<option value="Pénoplastie d\'élargissement (élargissement du pénis)">'
+                                    +'Pénoplastie d\'élargissement (élargissement du pénis)'
+                                    +'</option>'
+                                    +'<option value="Pénoplastie d\'allongement (allongement du pénis)">'
+                                    +'Pénoplastie d\'allongement (allongement du pénis)'
+                                    +'</option>'
+                                );
+                            } else if (val === "chirurgie orthopédique") {
+                                $("#devis_chirurgie").html(
+                                    '<option value="Prothèse totale du genou">'
+                                    +'Prothèse totale du genou'
+                                    +'</option>'
+                                    +'<option value="Hernie discale">'
+                                    +'Hernie discale'
+                                    +'</option>'
+                                    +'<option value="Prothèse totale de la hanche">'
+                                    +'Prothèse totale de la hanche'
+                                    +'</option>'
+                                    +'<option value="Hallux Valgus">'
+                                    +'Hallux Valgus'
+                                    +'</option>'
+                                    +'<option value="Syndrome du canal carpien">'
+                                    +'Syndrome du canal carpien'
+                                    +'</option>'
+                                );
+                            } else if (val === "chirurgie de l'obésité") {
+                                $("#devis_chirurgie").html(
+                                    '<option value="Anneau gastrique">'
+                                    +'Anneau gastrique'
+                                    +'</option>'
+                                    +'<option value="Sleeve gastrectomie">'
+                                    +'Sleeve gastrectomie'
+                                    +'</option>'
+                                    +'<option value="Bypass">'
+                                    +'Bypass'
+                                    +'</option>'
+                                );
+                            } else if (val === "chirurgie capillaire") {
+                                $("#devis_chirurgie").html(
+                                    '<option value="Anneau gastrique">'
+                                    +'Greffe Capillaire'
+                                    +'</option>'
+                                    +'<option value="Epilation Laser">'
+                                    +'Epilation Laser'
+                                    +'</option>'
+                                );
+                            } else if (val === "chirurgie de l'infertilité") {
+                                $("#devis_chirurgie").html(
+                                    '<option value="Insémination artificielle">'
+                                    +'Insémination artificielle'
+                                    +'</option>'
+                                    +'<option value="Fécondation in vitro">'
+                                    +'Fécondation in vitro'
+                                    +'</option>'
+                                    +'<option value="Biopsie testiculaire">'
+                                    +'Biopsie testiculaire'
+                                    +'</option>'
+                                );
+                            } else if (val === "chirurgie dentaire") {
+                                $("#devis_chirurgie").html(
+                                    '<option value="Implant dentaire">'
+                                    +'Implant dentaire'
+                                    +'</option>'
+                                    +'<option value="Pose de facette dentaire">'
+                                    +'Pose de facette dentaire'
+                                    +'</option>'
+                                    +'<option value="Blanchiment dentaire">'
+                                    +'Blanchiment dentaire'
+                                    +'</option>'
+                                );
+                            } else if (val === "chirurgie ophtalmologie") {
+                                $("#devis_chirurgie").html(
+                                    '<option value="Lasik (les 2 yeux)">'
+                                    + 'Lasik (les 2 yeux)'
+                                    + '</option>'
+                                    + '<option value="Laser PKR (les 2 yeux)">'
+                                    + 'Laser PKR (les 2 yeux)'
+                                    + '</option>'
+                                );
+                            }
+                        }
+                    });
+                });
+            </script-->
         {% endblock %}
     </body>
 </html>

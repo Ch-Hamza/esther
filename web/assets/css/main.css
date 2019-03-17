@@ -31,3 +31,28 @@
 	width: 50px;
 	height: 50px;
 }
+
+.input-no-borders {
+	border: none;
+	background: transparent;
+	color: white;
+	border-bottom: white 0.5px solid;
+	border-radius: 0;
+}
+
+.input-no-borders::placeholder {
+	color: white;
+}
+
+.input-no-borders:focus {
+	background: transparent;
+	border: none;
+	color: white;
+	border-bottom: white 2px solid;
+}
+
+.timepicker:before {
+	content: 'Call Time: ';
+	margin-right:.6em;
+	color:#9d9d9d;
+}

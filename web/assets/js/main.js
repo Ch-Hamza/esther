@@ -307,7 +307,7 @@
 	        items: 1,
             loop: true,
             nav: false,
-            nav:true,
+            //nav:true,
             navText:['<i class="icofont icofont-bubble-left">', '<i class="icofont icofont-bubble-right">'],
             dots: false,
             smartSpeed:900,
