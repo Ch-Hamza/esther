@@ -20,7 +20,7 @@ class DefaultController extends Controller
      * * @Route("/", name="homepage_nl", defaults={"_locale":"%locale%"})
      * @Route("/{_locale}/", name="homepage", requirements={"_locale" = "%app.locales%"})
      */
-    public function indexAction(Request $request)
+    public function indexAction(Request $request, \Swift_Mailer $mailer)
     {
         $message = new Message();
         $form = $this->get('form.factory')->create(MessageType::class, $message);
@@ -46,6 +46,35 @@ class DefaultController extends Controller
             $em = $this->getDoctrine()->getManager();
             $em->persist($devis);
             $em->flush();
+
+            $message = (new \Swift_Message('Test Email'))
+                ->setFrom('hamzachebil40@gmail.com')
+                ->setTo('hamzachebil40@gmail.com')
+                ->setBody(
+                    $this->renderView(
+                        'Emails/devis.html.twig',
+                        [
+                            'id' => $devis->getId(),
+                            'prenom' => $devis->getPrenom(),
+                            'nom' => $devis->getNom(),
+                            'email' => $devis->getEmail(),
+                            'telephone' => $devis->getTelephone(),
+                            'sexe' => $devis->getSexe(),
+                            'pays' => $devis->getPays(),
+                            'type_chirurgie' => $devis->getTypeChirurgie(),
+                            'chirurgie' => $devis->getChirurgie(),
+                            'autre_details' => $devis->getAutreDetails(),
+                            'rappel' => $devis->getRappel(),
+                            'moyen_rappel' => $devis->getMoyenRappel(),
+                            'commentaires' => $devis->getCommentaires(),
+                            'age' => $devis->getAge(),
+                        ]
+                    ),
+                    'text/html'
+                )
+            ;
+            $mailer->send($message);
+
             return $this->redirectToRoute('homepage');
         }
 

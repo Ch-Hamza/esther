@@ -1,0 +1,21 @@
+<h3>Devis sent!</h3>
+
+id => {{ id }}
+prenom => {{ prenom }}
+nom => {{ nom }}
+email => {{ email }}
+telephone => {{ telephone }}
+sexe => {{ sexe }}
+pays => {{ pays }}
+type_chirurgie => {{ type_chirurgie }}
+{% if type_chirurgie == 'Autre' %}
+autre_details => {{ autre_details }}
+{% else %}
+chirurgie => {{ chirurgie }}
+{% endif %}
+rappel => {{ rappel|date('H:i') }}
+moyen_rappel => {{ moyen_rappel }}
+commentaires => {{ commentaires }}
+age' => {{ age }}
+
+Thanks!

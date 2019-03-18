@@ -175,6 +175,7 @@ class DevisType extends AbstractType
                     'class' => 'form-control tm-form-field input-no-borders',
                     'style'=> 'display:none;'
                 ),
+                'required' => false,
                 'label' => false,
             ))
             ->add('rappel', TimeType::class, array(
