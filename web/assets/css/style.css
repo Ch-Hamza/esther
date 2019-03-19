@@ -2917,6 +2917,9 @@ html {
 }
 .item-inner {
     position: relative;
+    width: 250px;
+    height: 350px;
+    object-fit: cover;
 }
 .item-inner .test {
     width: auto;
