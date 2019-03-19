@@ -53,7 +53,7 @@ class MessageType extends AbstractType
                 'label' => false,
             ))
             ->add('save',  SubmitType::class, array(
-                'label' => 'translate.form_save',
+                'label' => 'Envoyer',
                 "attr" => array('class' => 'tm-btn1'),
             ))
         ;

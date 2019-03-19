@@ -48,8 +48,8 @@ class DefaultController extends Controller
             $em->flush();
 
             $message = (new \Swift_Message('Test Email'))
-                ->setFrom('hamzachebil40@gmail.com')
-                ->setTo('hamzachebil40@gmail.com')
+                ->setFrom('fathallah.ghassen97@gmail.com')
+                ->setTo('fathallah.ghassen97@gmail.com')
                 ->setBody(
                     $this->renderView(
                         'Emails/devis.html.twig',

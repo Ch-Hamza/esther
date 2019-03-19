@@ -1,21 +1,21 @@
 <h3>Devis sent!</h3>
 
-id => {{ id }}
-prenom => {{ prenom }}
-nom => {{ nom }}
-email => {{ email }}
-telephone => {{ telephone }}
-sexe => {{ sexe }}
-pays => {{ pays }}
-type_chirurgie => {{ type_chirurgie }}
+id => {{ id }} <br>
+prenom => {{ prenom }} <br>
+nom => {{ nom }} <br>
+email => {{ email }} <br>
+telephone => {{ telephone }} <br>
+sexe => {{ sexe }} <br>
+pays => {{ pays }} <br>
+type_chirurgie => {{ type_chirurgie }} <br>
 {% if type_chirurgie == 'Autre' %}
-autre_details => {{ autre_details }}
+autre_details => {{ autre_details }} <br>
 {% else %}
-chirurgie => {{ chirurgie }}
+chirurgie => {{ chirurgie }} <br>
 {% endif %}
-rappel => {{ rappel|date('H:i') }}
-moyen_rappel => {{ moyen_rappel }}
-commentaires => {{ commentaires }}
-age' => {{ age }}
+rappel => {{ rappel|date('H:i') }} <br>
+moyen_rappel => {{ moyen_rappel }} <br>
+commentaires => {{ commentaires }} <br>
+age' => {{ age }} <br>
 
 Thanks!
