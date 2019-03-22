@@ -17,7 +17,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class DefaultController extends Controller
 {
     /**
-     * * @Route("/", name="homepage_nl", defaults={"_locale":"%locale%"})
+     * @Route("/", name="homepage_nl", defaults={"_locale":"%locale%"})
      * @Route("/{_locale}/", name="homepage", requirements={"_locale" = "%app.locales%"})
      */
     public function indexAction(Request $request, \Swift_Mailer $mailer)
@@ -88,7 +88,7 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("/chirurgies/{id}", name="chirurgie_index")
+     * @Route("/{_locale}/chirurgies/{id}", name="chirurgie_index", requirements={"_locale" = "%app.locales%"})
      */
     public function chirurgieAction($id)
     {
@@ -101,7 +101,7 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("/chirurgies_details/{id}", name="chirurgie_details_index")
+     * @Route("/{_locale}/chirurgies_details/{id}", name="chirurgie_details_index", requirements={"_locale" = "%app.locales%"})
      */
     public function chirurgie_detailsAction($id)
     {
@@ -114,7 +114,7 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("/procedure", name="procedure_index")
+     * @Route("/{_locale}/procedure", name="procedure_index", requirements={"_locale" = "%app.locales%"})
      */
     public function procedureAction()
     {
@@ -125,7 +125,7 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("/clinique", name="clinique_index")
+     * @Route("/{_locale}/clinique", name="clinique_index", requirements={"_locale" = "%app.locales%"})
      */
     public function cliniqueAction()
     {
@@ -136,7 +136,7 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("/hotel", name="hotel_index")
+     * @Route("/{_locale}/hotel", name="hotel_index", requirements={"_locale" = "%app.locales%"})
      */
     public function hotelAction()
     {
@@ -147,7 +147,7 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("/tarifs", name="tarifs_index")
+     * @Route("/{_locale}/tarifs", name="tarifs_index", requirements={"_locale" = "%app.locales%"})
      */
     public function tarifsAction()
     {
@@ -158,7 +158,7 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("/blog", name="blog_index")
+     * @Route("/{_locale}/blog", name="blog_index", requirements={"_locale" = "%app.locales%"})
      */
     public function blogAction()
     {
@@ -169,7 +169,7 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("/blog/eshter-leader", name="blog_details_index")
+     * @Route("/{_locale}/blog/eshter-leader", name="blog_details_index", requirements={"_locale" = "%app.locales%"})
      */
     public function blog1Action()
     {
@@ -180,7 +180,7 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("/blog/garanties", name="blog_details1_index")
+     * @Route("/{_locale}/blog/garanties", name="blog_details1_index", requirements={"_locale" = "%app.locales%"})
      */
     public function blog2Action()
     {
@@ -191,7 +191,7 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("/medecins/dr-zied-mabrouki", name="first-medecin")
+     * @Route("/{_locale}/medecins/dr-zied-mabrouki", name="first-medecin", requirements={"_locale" = "%app.locales%"})
      */
     public function med1Action()
     {
@@ -202,8 +202,8 @@ class DefaultController extends Controller
     }
 
     /**
- * @Route("/medecins/dr-najoua-ben-slimen", name="second-medecin")
- */
+     * @Route("/{_locale}/medecins/dr-najoua-ben-slimen", name="second-medecin", requirements={"_locale" = "%app.locales%"})
+    */
     public function med2Action()
     {
         $chirurgies = $this->getDoctrine()->getManager()->getRepository(Chirurgie::class)->findAll();
@@ -213,7 +213,7 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("/medecins/dr-amine-masmoudi", name="third-medecin")
+     * @Route("/{_locale}/medecins/dr-amine-masmoudi", name="third-medecin", requirements={"_locale" = "%app.locales%"})
      */
     public function med3Action()
     {
@@ -224,7 +224,7 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("/medecins/dr-chedi-bali", name="fourth-medecin")
+     * @Route("/{_locale}/medecins/dr-chedi-bali", name="fourth-medecin", requirements={"_locale" = "%app.locales%"})
      */
     public function med4Action()
     {
@@ -235,7 +235,7 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("/medecins/dr-tahar-djemal", name="fifth-medecin")
+     * @Route("/{_locale}/medecins/dr-tahar-djemal", name="fifth-medecin", requirements={"_locale" = "%app.locales%"})
      */
     public function med5Action()
     {
