@@ -87,6 +87,16 @@ class DefaultController extends Controller
         ));
     }
 
+
+    /**
+     * @Route("/", name="homepage_nl", defaults={"_locale":"%locale%"})
+     */
+    public function index1(Request $request, \Swift_Mailer $mailer)
+    {
+            return $this->redirectToRoute('homepage');
+    }
+
+
     /**
      * @Route("/{_locale}/chirurgies/{id}", name="chirurgie_index", requirements={"_locale" = "%app.locales%"})
      */
