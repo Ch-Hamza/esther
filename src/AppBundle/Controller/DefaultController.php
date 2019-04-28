@@ -254,4 +254,15 @@ class DefaultController extends Controller
             'chirurgies' => $chirurgies,
         ));
     }
+
+    /**
+     * @Route("/{_locale}/medecins/dr-soumoud-shimi", name="sixth-medecin", requirements={"_locale" = "%app.locales%"})
+     */
+    public function med6Action()
+    {
+        $chirurgies = $this->getDoctrine()->getManager()->getRepository(Chirurgie::class)->findAll();
+        return $this->render('default/medecin/medecin6.html.twig' , array(
+            'chirurgies' => $chirurgies,
+        ));
+    }
 }

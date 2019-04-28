@@ -9,21 +9,80 @@ translate.devis: Quote
 translate.blog: Blog
 translate.contact: Contact
 
-translate.1: "Your health is precious to us"
+#landing page
+translate.1: 'Your health is precious to us'
 translate.2: Surgery
 translate.12: breast
-translate.3: "of the face"
+translate.3: 'of the face'
 translate.4: silhouette
 translate.5: intimate
 translate.6: orthopedic
-translate.7: "of obesity"
+translate.7: 'of obesity'
 translate.8: capillary
 translate.9: infertility
 translate.10: dental
 translate.11: ophthalmology
-
-translate.13: Esther Esthetica is the leader of aesthetic and medical tourism in Tunisia.
-translate.14: Our team ensures a personalized follow-up to guarantee you the best conditions during your stay.
-
-translate.btncontact: Contact us
+translate.13: 'Esther Esthetica is the leader of aesthetic and medical tourism in Tunisia.'
+translate.14: 'Our team ensures a personalized follow-up to guarantee you the best conditions during your stay.'
+translate.btncontact: 'Contact us'
 translate.btndevis: Cote
+#end landing page
+
+#section 2
+translate.mq: Qualified doctors
+translate.mqdesc: A selection of highly qualified and experienced doctors, specialists and surgeons. More than 50 operations and personalized care for each patient according to his requests and his needs.
+translate.cli: Hospital
+translate.clidesc: The Myron Clinic is an institution that meets all the standards currently required in the field of health, enabling it to become one of the most innovative on the continent.
+translate.ser: 24 hours service
+translate.serdesc: Your health is precious to us. This is our motto, for this we provide close assistance and personalized monitoring with availability 24h / 7d.
+#end section 2
+
+#section 3
+translate.15: WHO ARE WE
+translate.16: ESTHER ESTHETICA
+translate.17: Why people
+translate.18: Choose
+translate.19: Us?
+translate.20: We provide the best service all over the country. People choose us because of the following benefits.
+translate.21: We are committed to accompany you in your approach, assist you, guide you from the reception at the airport to your departure. This is a full treatment and the price includes treatment, hospitality, car transport, accommodation at the clinic and hotel as well as doctor's fees.
+translate.22: READ MORE
+#end section 3
+
+#section 4
+translate.23: Our departments
+translate.24: READ MORE
+#end section 4
+
+#section 5
+translate.25: OUR EXPERIENCED PHYSICIANS
+translate.26: Plastic Restorative and Aesthetic Surgery
+translate.27: Maxillofacial surgery and cosmetic surgery
+translate.28: Dental Medicine
+translate.29: Aesthetic and restorative surgery
+translate.30: Reconstructive plastic surgery and aesthetics
+translate.31: Dentist doctor
+#end section 5
+
+#section 6
+translate.32: ESTHER ESTHETICA IN FIGURES
+translate.33: Qualified doctors
+translate.34: Medical Specialties
+translate.35: Proposed interventions
+translate.36: Pretty smiles
+#end section 6
+
+translate.37: SEE OUR GALLERY
+
+#section 7
+translate.38: APPOINTMENT
+translate.39: If you wish to make an appointment for a medical intervention, simply fill out the form with valid data and we will contact you by telephone for confirmation.
+#end section 7
+
+#section 8 contact
+translate.40: Get in touch
+translate.41: Address
+translate.42: 181 Avenue Habib Bourguiba The Kram, 2015 Tunis, Tunisia
+translate.43: Phone
+#end section8 contact
+
+translate.44: Follow us

@@ -130,10 +130,9 @@
                     <div class="empty-space col-md-b0 col-xs-b30"></div>
                     <div class="tm-icon-box">
                         <div class="tm-icon"><i class="fa fa-user-md"></i></div>
-                        <h2 class="tm-icon-box-title">Médecins qualifiés</h2>
+                        <h2 class="tm-icon-box-title"> {{ 'translate.mq' |trans  }}</h2>
                         <p class="tm-icon-box-text">
-                            Une sélection Des médecins , spécialistes et chirurgiens hautement qualifiés et expérimentés.
-                            Plus de 50 opérations et des soins personnalisés pour chaque patient suivant ses demandes et ses besoins.
+                            {{ 'translate.mqdesc' |trans  }}
                         </p>
                     </div>
                 </div><!-- .col -->
@@ -141,9 +140,9 @@
                     <div class="empty-space col-md-b0 col-xs-b30"></div>
                     <div class="tm-icon-box">
                         <div class="tm-icon"><i class="fa fa-ambulance"></i></div>
-                        <h2 class="tm-icon-box-title">Clinique</h2>
+                        <h2 class="tm-icon-box-title"> {{ 'translate.cli' |trans  }}</h2>
                         <p class="tm-icon-box-text">
-                            La clinique Myron est un établissement répond à toutes les normes actuellement requises dans le domaine de la santé lui permettant de se hisser parmi les plus innovants du continent.
+                            {{ 'translate.clidesc' |trans  }}
                         </p>
                     </div>
                 </div><!-- .col -->
@@ -151,10 +150,9 @@
                     <div class="empty-space col-md-b0 col-xs-b30"></div>
                     <div class="tm-icon-box">
                         <div class="tm-icon"><i class="fa fa-hospital-o"></i></div>
-                        <h2 class="tm-icon-box-title">Service 24 heures</h2>
+                        <h2 class="tm-icon-box-title"> {{ 'translate.ser' |trans  }}</h2>
                         <p class="tm-icon-box-text">
-                            Votre santé nous est précieuse.
-                            C'est notre devise, pour celà nous assurons une assistance rapprochée et suivi personnalisé avec une disponibilité 24h/7j.
+                            {{ 'translate.serdesc' |trans  }}
                         </p>
                     </div>
                 </div>
@@ -167,7 +165,7 @@
     <section id="about">
         <div class="empty-space col-md-b100 col-xs-b70"></div>
         <div class="tm-section-heading text-center">
-            <h2>QUI SOMMES NOUS</h2>
+            <h2>{{ 'translate.15' |trans  }}</h2>
             <div class="tm-section-seperator"><span></span></div>
             <div class="empty-space col-md-b60 col-xs-b40"></div>
         </div>
@@ -181,7 +179,7 @@
                     <div class="col-lg-5">
                         <div class="tm-shedule-wrap">
                             <div class="tm-shedule">
-                                <h3 class="tm-shedule-title">ESTHER ESTHETICA</h3>
+                                <h3 class="tm-shedule-title">{{ 'translate.16' |trans  }}</h3>
                                 <!-- For Youtube -->
                                 <div class="embed-responsive embed-responsive-16by9">
                                     <!--iframe class="embed-responsive-item" width="816" height="459" src="https://www.youtube.com/embed/2AwnoMVteXw" allowfullscreen>
@@ -201,14 +199,14 @@
                         <div class="empty-space col-md-b30 col-xs-b0"></div>
                         <div class="tm-about-wrap tm-hf-hide">
                             <div class="tm-about tm-gray-bg wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.1s">
-                                <h3 class="tm-about-title">Pourquoi les gens <span>Nous</span> choisissent?</h3>
+                                <h3 class="tm-about-title">{{ 'translate.17' |trans  }}<span>{{ 'translate.18' |trans  }}</span> {{ 'translate.19' |trans  }}</h3>
                                 <div class="tm-about-text">
-                                    <p>Nous fournissons le meilleur service dans tout le pays. Les gens nous choisissent en raison des avantages suivants. </p>
-                                    <p>Nous nous engageons à vous accompagner dans votre démarche, vous assister, vous orienter depuis l’accueil à l’aéroport jusqu’à votre départ. Il s’agit d’une prise en charge complète et le prix inclut le traitement, l’accueil, le transport en voiture, le logement à la clinique et à l’hôtel ainsi que les honoraires du médecin.  </p>
+                                    <p>{{ 'translate.20' |trans  }} </p>
+                                    <p>{{ 'translate.21' |trans  }}  </p>
                                 </div>
                                 <div class="empty-space col-xs-b25"></div>
                                 <div class="tm-about-btn">
-                                    <a href="#" class="tm-btn1">LIRE LA SUITE</a>
+                                    <a href="#" class="tm-btn1">{{ 'translate.22' |trans  }}</a>
                                 </div>
                             </div>
                         </div>
@@ -225,7 +223,7 @@
     <section class="tm-gray-bg" id="department">
         <div class="empty-space col-md-b100 col-xs-b70"></div>
         <div class="tm-section-heading text-center">
-            <h2>Nos Départements</h2>
+            <h2>{{ 'translate.23' |trans  }}</h2>
             <div class="tm-section-seperator"><span></span></div>
             <div class="empty-space col-md-b60 col-xs-b40"></div>
         </div>
@@ -258,7 +256,7 @@
                                             </div>
                                             <div class="empty-space col-xs-b25"></div>
                                             <div class="tm-about-btn">
-                                                <a href="{{ path('chirurgie_index', {'id': c.id}) }}" class="tm-btn1">LIRE LA SUITE</a>
+                                                <a href="{{ path('chirurgie_index', {'id': c.id}) }}" class="tm-btn1">{{ 'translate.24' |trans  }}</a>
                                             </div>
                                         </div>
                                     </div>
@@ -277,7 +275,7 @@
     <section id="doctor">
         <div class="empty-space col-md-b100 col-xs-b70"></div>
         <div class="tm-section-heading text-center">
-            <h2>NOS MÉDECINS EXPÉRIMENTÉS</h2>
+            <h2>{{ 'translate.25' |trans  }}</h2>
             <div class="tm-section-seperator"><span></span></div>
             <div class="empty-space col-md-b60 col-xs-b40"></div>
         </div>
@@ -294,7 +292,7 @@
                             </div>
                             <div class="tm-member-meta tm-gray-bg text-center">
                                 <h3 class="tm-member-name"><a href="{{ path('first-medecin') }}">Dr Zied MABROUKI</a></h3>
-                                <span class="tm-member-speciality">Chirurgie Plastique Réparatrice et Esthétique</span>
+                                <span class="tm-member-speciality">{{ 'translate.26' |trans  }}</span>
                             </div>
                         </div>
                         <div class="tm-team-member">
@@ -306,7 +304,7 @@
                             </div>
                             <div class="tm-member-meta tm-gray-bg text-center">
                                 <h3 class="tm-member-name"><a href="{{ path('second-medecin') }}">Dr Najoua Ben Slimen</a></h3>
-                                <span class="tm-member-speciality">Chirurgie maxillo-faciale et de chirurgie esthétique</span>
+                                <span class="tm-member-speciality">{{ 'translate.27' |trans  }}</span>
                             </div>
                         </div>
                         <div class="tm-team-member">
@@ -318,7 +316,7 @@
                             </div>
                             <div class="tm-member-meta tm-gray-bg text-center">
                                 <h3 class="tm-member-name"><a href="{{ path('third-medecin') }}">Dr Amine Masmoudi</a></h3>
-                                <span class="tm-member-speciality">Médecine dentaire</span>
+                                <span class="tm-member-speciality">{{ 'translate.28' |trans  }}</span>
                             </div>
                         </div>
                         <div class="tm-team-member">
@@ -330,7 +328,7 @@
                             </div>
                             <div class="tm-member-meta tm-gray-bg text-center">
                                 <h3 class="tm-member-name"><a href="{{ path('fourth-medecin') }}">Dr Chedi BALI</a></h3>
-                                <span class="tm-member-speciality">Chirurgie esthétique et réparatrice</span>
+                                <span class="tm-member-speciality">{{ 'translate.29' |trans  }}</span>
                             </div>
                         </div>
                         <div class="tm-team-member">
@@ -342,7 +340,19 @@
                             </div>
                             <div class="tm-member-meta tm-gray-bg text-center">
                                 <h3 class="tm-member-name"><a href="{{ path('fifth-medecin') }}">Dr Tahar Djemal</a></h3>
-                                <span class="tm-member-speciality">Chirurgie plastique reconstructrice et esthétique</span>
+                                <span class="tm-member-speciality">{{ 'translate.30' |trans  }}</span>
+                            </div>
+                        </div>
+                        <div class="tm-team-member">
+                            <div class="tm-member-hover">
+                                <a href="{{ path('sixth-medecin') }}" class="tm-member-thumb">
+                                    <img src="{{ asset('assets/img/doctors/dr-soumoud.png') }}" alt="">
+                                </a>
+                                <div class="tm-member-social-btn-wrap"></div>
+                            </div>
+                            <div class="tm-member-meta tm-gray-bg text-center">
+                                <h3 class="tm-member-name"><a href="{{ path('sixth-medecin') }}">Dr Soumoud Shimi</a></h3>
+                                <span class="tm-member-speciality">{{ 'translate.31' |trans  }}</span>
                             </div>
                         </div>
                     </div>
@@ -359,7 +369,7 @@
         <div class="container">
             <div class="row">
                 <div class="tm-section-heading text-center">
-                    <h2>ESTHER ESTHETICA EN CHIFFRES</h2>
+                    <h2>{{ 'translate.32' |trans  }}</h2>
                     <div class="empty-space col-md-b60 col-xs-b40"></div>
                 </div>
             </div>
@@ -368,7 +378,7 @@
                     <div class="tm-fun-fact text-center">
                         <i class="icofont icofont-doctor wow fadeInDown" data-wow-delay="0.6s" data-wow-duration="2s"></i>
                         <h2 class="tm-counter">10</h2>
-                        <h3>Médecins qualifiés</h3>
+                        <h3>{{ 'translate.33' |trans  }}</h3>
                     </div>
                     <div class="empty-space col-xs-b30"></div>
                 </div>
@@ -376,7 +386,7 @@
                     <div class="tm-fun-fact text-center">
                         <i class="icofont icofont-hat-alt wow fadeInDown" data-wow-delay="0.2s" data-wow-duration="2s"></i>
                         <h2 class="tm-counter">8</h2>
-                        <h3>Spécialités médicales</h3>
+                        <h3>{{ 'translate.34' |trans  }}</h3>
                     </div>
                     <div class="empty-space col-xs-b30"></div>
                 </div>
@@ -384,7 +394,7 @@
                     <div class="tm-fun-fact text-center">
                         <i class="icofont icofont-medicine wow fadeInDown" data-wow-delay="0.8s" data-wow-duration="2s"></i>
                         <h2 class="tm-counter">50</h2>
-                        <h3>Interventions proposés</h3>
+                        <h3>{{ 'translate.35' |trans  }}</h3>
                     </div>
                     <div class="empty-space col-xs-b30"></div>
                 </div>
@@ -392,7 +402,7 @@
                     <div class="tm-fun-fact text-center">
                         <i class="icofont icofont-emo-simple-smile wow fadeInDown" data-wow-delay="0.4s" data-wow-duration="2s"></i>
                         <h2 class="tm-counter">2017</h2>
-                        <h3>Jolis sourires</h3>
+                        <h3>{{ 'translate.36' |trans  }}</h3>
                     </div>
                     <div class="empty-space col-xs-b30"></div>
                 </div>
@@ -406,7 +416,7 @@
     <section id="gallery">
         <div class="empty-space col-md-b100 col-xs-b70"></div>
         <div class="tm-section-heading text-center">
-            <h2>VOIR NOTRE GALERIE</h2>
+            <h2>{{ 'translate.37' |trans }}</h2>
             <div class="tm-section-seperator"><span></span></div>
             <div class="empty-space col-md-b60 col-xs-b40"></div>
         </div>
@@ -484,11 +494,10 @@
                     <div class="empty-space col-md-b0 col-xs-b70"></div>
                     <div class="tm-appointment-heading tm-gray-bg wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.1s">
                         <div class="tm-section-heading text-center">
-                            <h2>RENDEZ-VOUS</h2>
+                            <h2>{{ 'translate.38'|trans }}</h2>
                             <div class="tm-section-seperator"><span></span></div>
                             <p>
-                                Si vous souhaitez prendre rendez-vous pour une intervention médicale, remplissez simplement
-                                le formulaire avec des données valides et nous vous contacterons par téléphone pour confirmation.
+                               {{ 'translate.39'|trans }}
                             </p>
                         </div>
                     </div>
@@ -536,7 +545,7 @@
     <section id="contact">
         <div class="empty-space col-md-b100 col-xs-b70"></div>
         <div class="tm-section-heading text-center">
-            <h2>Entrer en contact</h2>
+            <h2> {{ 'translate.40'|trans }}</h2>
             <div class="tm-section-seperator"><span></span></div>
             <div class="empty-space col-md-b60 col-xs-b40"></div>
         </div>
@@ -583,14 +592,14 @@
                     <div class="tm-contact-info">
                         <div class="tm-single-contact">
                             <i class="fa fa-map-marker"></i>
-                            <h3>Adresse</h3>
-                            <p>181 Avenue Habib Bourguiba Le Kram, 2015 Tunis, Tunisie</p>
+                            <h3> {{ 'translate.41'|trans }}</h3>
+                            <p> {{ 'translate.42'|trans }}</p>
                         </div>
                         <div class="empty-space col-xs-b25"></div>
                         <div class="tm-single-contact">
                             <i class="fa fa-phone"></i>
-                            <h3>Téléphone</h3>
-                            <p>+0216 54388569</p>
+                            <h3> {{ 'translate.44'|trans }}</h3>
+                            <p>+216 54 388 569</p>
                         </div>
                         <div class="empty-space col-xs-b25"></div>
                         <div class="tm-single-contact">
@@ -623,7 +632,7 @@
                 <div class="row">
                     <div class="col-lg-8">
                         <div class="tm-footer-social">
-                            <h2>Suivez nous</h2>
+                            <h2>{{ 'translate.44'|trans }}</h2>
                             <div class="tm-footer-social-list">
                                 <a href="#" class="tm-social-btn blue">
                                     <i class="fa fa-facebook-square"></i>
@@ -649,7 +658,7 @@
                         <div class="tm-footer-hotline">
                             <div class="tm-footer-hotline-in">
                                 <div class="tm-phone-icon"><i class="fa fa-mobile"></i></div>
-                                <p>+216 54388569</p>
+                                <p>+216 54 388 569</p>
                             </div>
                         </div>
                     </div>

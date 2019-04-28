@@ -9,21 +9,80 @@ translate.devis: Devis
 translate.blog: Blog
 translate.contact: Contact
 
-translate.1: "Votre santé nous est précieuse"
+#landing page
+translate.1: 'Votre santé nous est précieuse'
 translate.2: Chirurgie
-translate.12: "des seins"
-translate.3: "du visage"
-translate.4: "de la silhouette"
+translate.12: 'des seins'
+translate.3: 'du visage'
+translate.4: 'de la silhouette'
 translate.5: intime
 translate.6: orthopédique
-translate.7: "de l'obésité"
+translate.7: 'de l''obésité'
 translate.8: capillaire
-translate.9: "de l'infertilité"
+translate.9: 'de l''infertilité'
 translate.10: dentaire
 translate.11: ophtalmologie
-
-translate.13: Esther esthetica est le leader du tourisme esthétique et médical en Tunisie.
-translate.14: Notre équipe assure un suivi personnalisé pour vous garantir les meilleurs conditions durant votre séjour.
-
-translate.btncontact: Contactez nous
+translate.13: 'Esther esthetica est le leader du tourisme esthétique et médical en Tunisie.'
+translate.14: 'Notre équipe assure un suivi personnalisé pour vous garantir les meilleurs conditions durant votre séjour.'
+translate.btncontact: 'Contactez nous'
 translate.btndevis: Devis
+#end landing page
+
+#section 2
+translate.mq: Médecins qualifiés
+translate.mqdesc: Une sélection Des médecins , spécialistes et chirurgiens hautement qualifiés et expérimentés. Plus de 50 opérations et des soins personnalisés pour chaque patient suivant ses demandes et ses besoins.
+translate.cli: Clinique
+translate.clidesc: La clinique Myron est un établissement répond à toutes les normes actuellement requises dans le domaine de la santé lui permettant de se hisser parmi les plus innovants du continent.
+translate.ser: Service 24 heures
+translate.serdesc: Votre santé nous est précieuse. C'est notre devise, pour celà nous assurons une assistance rapprochée et suivi personnalisé avec une disponibilité 24h/7j.
+#end section 2
+
+#section 3
+translate.15: QUI SOMMES NOUS
+translate.16: ESTHER ESTHETICA
+translate.17: Pourquoi les gens
+translate.18: Nous
+translate.19: choisissent?
+translate.20: Nous fournissons le meilleur service dans tout le pays. Les gens nous choisissent en raison des avantages suivants.
+translate.21: Nous nous engageons à vous accompagner dans votre démarche, vous assister, vous orienter depuis l’accueil à l’aéroport jusqu’à votre départ. Il s’agit d’une prise en charge complète et le prix inclut le traitement, l’accueil, le transport en voiture, le logement à la clinique et à l’hôtel ainsi que les honoraires du médecin.
+translate.22: LIRE LA SUITE
+#end section 3
+
+#section 4
+translate.23: Nos Départements
+translate.24: LIRE LA SUITE
+#end section 4
+
+#section 5
+translate.25: NOS MÉDECINS EXPÉRIMENTÉS
+translate.26: Chirurgie Plastique Réparatrice et Esthétique
+translate.27: Chirurgie maxillo-faciale et de chirurgie esthétique
+translate.28: Médecine dentaire
+translate.29: Chirurgie esthétique et réparatrice
+translate.30: Chirurgie plastique reconstructrice et esthétique
+translate.31: Médecin dentiste
+#end section 5
+
+#section 6
+translate.32: ESTHER ESTHETICA EN CHIFFRES
+translate.33: Médecins qualifiés
+translate.34: Spécialités médicales
+translate.35: Interventions proposés
+translate.36: Jolis sourires
+#end section 6
+
+translate.37: VOIR NOTRE GALERIE
+
+#section 7
+translate.38: RENDEZ-VOUS
+translate.39: Si vous souhaitez prendre rendez-vous pour une intervention médicale, remplissez simplement le formulaire avec des données valides et nous vous contacterons par téléphone pour confirmation.
+#end section 7
+
+#section 8 contact
+translate.40: Entrer en contact
+translate.41: Adresse
+translate.42: 181 Avenue Habib Bourguiba Le Kram, 2015 Tunis, Tunisie
+translate.43: Téléphone
+#end section8 contact
+
+translate.44: Suivez nous
