@@ -86,3 +86,95 @@ translate.43: Phone
 #end section8 contact
 
 translate.44: Follow us
+
+#mailing form
+translate.maling1: Enter your email adress
+translate.maling2: Send
+#end mailing form
+
+#devis form
+translate.devis1: Last Name
+translate.devis2: First Name
+translate.devis3: Email
+translate.devis4: Phone Number
+translate.devis5: Age
+translate.devis6: Gender
+translate.devis7: Mrs
+translate.devis8: Miss
+translate.devis9: Mr
+translate.devis10: Country
+translate.devis11: The requested intervention
+translate.devis12: breast surgery
+translate.devis13: facial surgery
+translate.devis14: silhouette surgery
+translate.devis15: intimate surgery
+translate.devis16: orthopedic surgery
+translate.devis17: obesity surgery
+translate.devis18: hair surgery
+translate.devis19: infertility surgery
+translate.devis20: dental surgery
+translate.devis21: ophthalmology surgery
+translate.devis22: Other
+translate.devis23: Breast augmentation with round breast prosthesis
+translate.devis24: Breast augmentation with anatomical breast prosthesis
+translate.devis25: Breast augmentation by lipofilling
+translate.devis26: Breast lift
+translate.devis27: Breast reduction
+translate.devis28: Gynecomastia
+translate.devis29: Breast lift with prostheses
+translate.devis30: Cervico-facial lift
+translate.devis31: Breast lift
+translate.devis32: Front lift
+translate.devis33: Full facelift
+translate.devis34: Lipofilling of the face
+translate.devis35: Simple rhinoplasty
+translate.devis36: Rhinoplasty and septoplasty
+translate.devis37: Ethnic rhinoplasty
+translate.devis38: Blepharoplasty 2 eyelids
+translate.devis39: Blepharoplasty 4 eyelids
+translate.devis40: The hair implant by FUE
+translate.devis41: Genioplasty
+translate.devis42: Genioplasty advancement
+translate.devis43: Otoplasty
+translate.devis44: Lip augmentation
+translate.devis45: Liposuction a single area (belly ...)
+translate.devis46: Liposuction on a small area (double chin ...)
+translate.devis47: Liposuction double chin + mini lifting
+translate.devis48: Medium liposuction (over 3 zones and more)
+translate.devis49: Complete liposuction (more than 10 zones)
+translate.devis50: Abdominoplasty
+translate.devis51: Abdominoplasty + Medium Liposuction
+translate.devis52: Arm lift
+translate.devis53: Augmentation of buttocks by gluteal implants
+translate.devis54: Augmentation of the buttocks by lipofilling
+translate.devis55: Average Liposuction + Lipofilling of Breasts
+translate.devis56: Liposuction medium + Lipofilling of the buttocks
+translate.devis57: Thigh lift
+translate.devis58: Nymphoplasty (reduction of vaginal lips)
+translate.devis59: Enlargement penoplasty (penis enlargement)
+translate.devis60: Penoplasty of lengthening (lengthening of the penis)
+translate.devis61: Total knee prosthesis
+translate.devis62: Herniated disc
+translate.devis63: Total hip prosthesis
+translate.devis64: Hallux valgus
+translate.devis65: Carpal tunnel syndrome
+translate.devis66: Gastric Band
+translate.devis67: Sleeve gastrectomy
+translate.devis68: Bypass
+translate.devis69: Capillary transplant
+translate.devis70: Laser hair removal
+translate.devis71: Artificial insemination
+translate.devis72: In vitro fertilization
+translate.devis73: Testicular biopsy
+translate.devis74: Dental implant
+translate.devis75: Dental facet
+translate.devis76: Teeth whitening
+translate.devis77: Lasik (both eyes)
+translate.devis78: PKR laser (both eyes)
+translate.devis79: Phone
+translate.devis80: What's App
+translate.devis81: Viber
+translate.devis82: Facebook
+translate.devis83: comments
+translate.devis84: Send
+#end devis form

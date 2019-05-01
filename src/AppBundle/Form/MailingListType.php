@@ -18,13 +18,13 @@ class MailingListType extends AbstractType
         $builder
             ->add('email', EmailType::class, array(
                 'attr' => array(
-                    'placeholder' => 'Entrez votre adresse email',
+                    'placeholder' => 'translate.maling1',
                     'class' => 'form-control tm-form-field input-no-borders',
                 ),
                 'label' => false,
             ))
             ->add('save',  SubmitType::class, array(
-                'label' => 'Envoyer',
+                'label' => 'translate.maling2',
                 "attr" => array('class' => 'tm-btn1 tm-reverse'),
             ))
         ;

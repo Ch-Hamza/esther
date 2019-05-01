@@ -86,3 +86,95 @@ translate.43: Téléphone
 #end section8 contact
 
 translate.44: Suivez nous
+
+#mailing form
+translate.maling1: Entrez votre adresse email
+translate.maling2: Envoyer
+#end mailing form
+
+#devis form
+translate.devis1: Nom
+translate.devis2: Prenom
+translate.devis3: Email
+translate.devis4: telephone
+translate.devis5: Age
+translate.devis6: sexe
+translate.devis7: Madame
+translate.devis8: Mademoiselle
+translate.devis9: Monsieur
+translate.devis10: pays
+translate.devis11: L'intervention demandée
+translate.devis12: chirurgie des seins
+translate.devis13: chirurgie du visage
+translate.devis14: chirurgie de la silhouette
+translate.devis15: chirurgie intime
+translate.devis16: chirurgie orthopédique
+translate.devis17: chirurgie de l'obésité
+translate.devis18: chirurgie capillaire
+translate.devis19: chirurgie de l'infertilité
+translate.devis20: chirurgie dentaire
+translate.devis21: chirurgie ophtalmologie
+translate.devis22: Autre
+translate.devis23: Augmentation mammaire par prothèse mammaires rondes
+translate.devis24: Augmentation mammaire par prothèse mammaires anatomiques
+translate.devis25: Augmentation mammaire par lipofilling
+translate.devis26: Lifting mammaire
+translate.devis27: Réduction mammaire
+translate.devis28: Gynécomastie
+translate.devis29: Lifting mammaire avec prothèses
+translate.devis30: Lifting cervico-facial
+translate.devis31: Lifting malaire
+translate.devis32: Lifting frontal
+translate.devis33: Lifting complet
+translate.devis34: Lipofilling du visage
+translate.devis35: Rhinoplastie simple
+translate.devis36: Rhinoplastie et septoplastie
+translate.devis37: Rhinoplastie ethnique
+translate.devis38: Blépharoplastie 2 paupiéres
+translate.devis39: Blépharoplastie 4 paupiéres
+translate.devis40: L'implant capillaire par FUE
+translate.devis41: Génioplastie
+translate.devis42: Génioplastie d'avancement
+translate.devis43: Otoplastie
+translate.devis44: Augmentation des lèvres
+translate.devis45: Liposuccion une seule zone (ventre...)
+translate.devis46: Liposuccion sur une petite zone (double menton...)
+translate.devis47: Liposuccion double menton + mini lifting
+translate.devis48: Liposuccion moyenne (sur 3 zones et plus)
+translate.devis49: Liposuccion complète (plus de 10 zones)
+translate.devis50: Abdominoplastie
+translate.devis51: Abdominoplastie + Liposuccion moyenne
+translate.devis52: Lifting des bras
+translate.devis53: Augmentation des fesses par implants fessiers
+translate.devis54: Augmentation des fesses par lipofilling
+translate.devis55: Liposuccion moyenne + Lipofilling des seins
+translate.devis56: Liposuccion moyenne + Lipofilling des fesses
+translate.devis57: Lifting des cuisses
+translate.devis58: Nymphoplastie (réduction des lèvres vaginale)
+translate.devis59: Pénoplastie d'élargissement (élargissement du pénis)
+translate.devis60: Pénoplastie d'allongement (allongement du pénis)
+translate.devis61: Prothèse totale du genou
+translate.devis62: Hernie discale
+translate.devis63: Prothèse totale de la hanche
+translate.devis64: Hallux Valgus
+translate.devis65: Syndrome du canal carpien
+translate.devis66: Anneau gastrique
+translate.devis67: Sleeve gastrectomie
+translate.devis68: Bypass
+translate.devis69: Greffe Capillaire
+translate.devis70: Epilation Laser
+translate.devis71: Insémination artificielle
+translate.devis72: Fécondation in vitro
+translate.devis73: Biopsie testiculaire
+translate.devis74: Implant dentaire
+translate.devis75: Pose de facette dentaire
+translate.devis76: Blanchiment dentaire
+translate.devis77: Lasik (les 2 yeux)
+translate.devis78: Laser PKR (les 2 yeux)
+translate.devis79: Telephone
+translate.devis80: What's App
+translate.devis81: Viber
+translate.devis82: Facebook
+translate.devis83: commentaires
+translate.devis84: Enovyer
+#end devis form
