@@ -48,7 +48,7 @@ class DefaultController extends Controller
             $em->flush();
 
             $message = (new \Swift_Message('Test Email'))
-                ->setFrom('fathallah.ghassen97@gmail.com')
+                ->setFrom(mailer_user)
                 ->setTo('fathallah.ghassen97@gmail.com')
                 ->setBody(
                     $this->renderView(
@@ -262,6 +262,17 @@ class DefaultController extends Controller
     {
         $chirurgies = $this->getDoctrine()->getManager()->getRepository(Chirurgie::class)->findAll();
         return $this->render('default/medecin/medecin6.html.twig' , array(
+            'chirurgies' => $chirurgies,
+        ));
+    }
+
+    /**
+     * @Route("/{_locale}/galerie", name="galerie_index", requirements={"_locale" = "%app.locales%"})
+     */
+    public function galerieAction()
+    {
+        $chirurgies = $this->getDoctrine()->getManager()->getRepository(Chirurgie::class)->findAll();
+        return $this->render('default/galerie.html.twig' , array(
             'chirurgies' => $chirurgies,
         ));
     }
