@@ -48,7 +48,7 @@ class DefaultController extends Controller
             $em->flush();
 
             $message = (new \Swift_Message('Test Email'))
-                ->setFrom(mailer_user)
+                ->setFrom('fathallah.ghassen97@gmail.com')
                 ->setTo('fathallah.ghassen97@gmail.com')
                 ->setBody(
                     $this->renderView(
