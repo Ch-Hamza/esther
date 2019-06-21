@@ -84,6 +84,14 @@ class DevisType extends AbstractType
                 ),
                 'label' => false,
             ))
+            ->add('anticidMedicaux', TextType::class, array(
+                'attr' => array(
+                    'placeholder' => 'translate.devis85',
+                    'class' => 'form-control tm-form-field input-no-borders',
+                ),
+                'label' => false,
+            ))
+
             ->add('typeChirurgie', ChoiceType::class, array(
                 'attr' => array(
                     'placeholder' => 'translate.devis11',

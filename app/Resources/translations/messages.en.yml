@@ -59,7 +59,7 @@ translate.26: Plastic Restorative and Aesthetic Surgery
 translate.27: Maxillofacial surgery and cosmetic surgery
 translate.28: Dental Medicine
 translate.29: Aesthetic and restorative surgery
-translate.30: Reconstructive plastic surgery and aesthetics
+translate.30: Morphological medicine | calvitis treatment and hair restoration
 translate.31: Dentist doctor
 #end section 5
 
@@ -81,7 +81,7 @@ translate.39: If you wish to make an appointment for a medical intervention, sim
 #section 8 contact
 translate.40: Get in touch
 translate.41: Address
-translate.42: 181 Avenue Habib Bourguiba The Kram, 2015 Tunis, Tunisia
+translate.42: Malek center bloc B - North urban center 1082 Tunis
 translate.43: Phone
 #end section8 contact
 
@@ -102,6 +102,7 @@ translate.devis6: Gender
 translate.devis7: Mrs
 translate.devis8: Miss
 translate.devis9: Mr
+translate.devis85: Medical anticidants
 translate.devis10: Country
 translate.devis11: The requested intervention
 translate.devis12: breast surgery

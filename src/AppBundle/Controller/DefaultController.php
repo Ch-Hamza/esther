@@ -61,6 +61,7 @@ class DefaultController extends Controller
                             'telephone' => $devis->getTelephone(),
                             'sexe' => $devis->getSexe(),
                             'pays' => $devis->getPays(),
+                            'anticidMedicaux' => $devis->getanticidMedicaux(),
                             'type_chirurgie' => $devis->getTypeChirurgie(),
                             'chirurgie' => $devis->getChirurgie(),
                             'autre_details' => $devis->getAutreDetails(),

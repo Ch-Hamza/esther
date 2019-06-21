@@ -59,7 +59,7 @@ translate.26: Chirurgie Plastique Réparatrice et Esthétique
 translate.27: Chirurgie maxillo-faciale et de chirurgie esthétique
 translate.28: Médecine dentaire
 translate.29: Chirurgie esthétique et réparatrice
-translate.30: Chirurgie plastique reconstructrice et esthétique
+translate.30: Médecine morphologique | traitement de la calvite et restauration capillaire
 translate.31: Médecin dentiste
 #end section 5
 
@@ -81,7 +81,7 @@ translate.39: Si vous souhaitez prendre rendez-vous pour une intervention médic
 #section 8 contact
 translate.40: Entrer en contact
 translate.41: Adresse
-translate.42: 181 Avenue Habib Bourguiba Le Kram, 2015 Tunis, Tunisie
+translate.42: Malek centre bloc B - Centre urbain nord 1082 Tunis
 translate.43: Téléphone
 #end section8 contact
 
@@ -102,6 +102,7 @@ translate.devis6: sexe
 translate.devis7: Madame
 translate.devis8: Mademoiselle
 translate.devis9: Monsieur
+translate.devis85: Anticidants médicaux
 translate.devis10: pays
 translate.devis11: L'intervention demandée
 translate.devis12: chirurgie des seins

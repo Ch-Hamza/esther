@@ -79,6 +79,13 @@ class Devis
     /**
      * @var string
      *
+     * @ORM\Column(name="anticidMedicaux", type="string", length=255)
+     */
+    private $anticidMedicaux;
+
+    /**
+     * @var string
+     *
      * @ORM\Column(name="type_chirurgie", type="string", length=255)
      */
     private $typeChirurgie;
@@ -271,6 +278,29 @@ class Devis
     public function getPays()
     {
         return $this->pays;
+    }
+    /**
+     * Set anticidMedicaux
+     *
+     * @param string $anticidMedicaux
+     *
+     * @return Devis
+     */
+    public function setAnticidMedicaux($anticidMedicaux)
+    {
+        $this->anticidMedicaux = $anticidMedicaux;
+
+        return $this;
+    }
+
+    /**
+     * Get anticidMedicaux
+     *
+     * @return string
+     */
+    public function getAnticidMedicaux()
+    {
+        return $this->anticidMedicaux;
     }
 
     /**
