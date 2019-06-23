@@ -199,6 +199,97 @@ class Category
      */
     private $updatedAt;
 
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nameen", type="string", length=255)
+     */
+    private $nameen;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="descriptionen", type="text")
+     */
+    private $descriptionen;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="detailsen", type="text")
+     */
+    private $detailsen;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="details1en", type="text")
+     */
+    private $details1en;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="details2en", type="text")
+     */
+    private $details2en;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="before_operationen", type="text")
+     */
+    private $beforeOperationen;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="before_operation1en", type="text")
+     */
+    private $beforeOperation1en;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="deroulement_operationen", type="text")
+     */
+    private $deroulementOperationen;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="after_operationen", type="text")
+     */
+    private $afterOperationen;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="after_operation1en", type="text")
+     */
+    private $afterOperation1en;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="complicationsen", type="text")
+     */
+    private $complicationsen;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="complications1en", type="text")
+     */
+    private $complications1en;
+
+
+
+
+
+
+
     /**
      * Get id
      *
@@ -676,5 +767,198 @@ class Category
     {
         $this->detailsimage3 = $detailsimage3;
     }
+
+    /**
+     * @return string
+     */
+    public function getNameen()
+    {
+        return $this->nameen;
+    }
+
+    /**
+     * @param string $nameen
+     */
+    public function setNameen($nameen)
+    {
+        $this->nameen = $nameen;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDescriptionen()
+    {
+        return $this->descriptionen;
+    }
+
+    /**
+     * @param string $descriptionen
+     */
+    public function setDescriptionen($descriptionen)
+    {
+        $this->descriptionen = $descriptionen;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDetailsen()
+    {
+        return $this->detailsen;
+    }
+
+    /**
+     * @param string $detailsen
+     */
+    public function setDetailsen($detailsen)
+    {
+        $this->detailsen = $detailsen;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDetails1en()
+    {
+        return $this->details1en;
+    }
+
+    /**
+     * @param string $details1en
+     */
+    public function setDetails1en($details1en)
+    {
+        $this->details1en = $details1en;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDetails2en()
+    {
+        return $this->details2en;
+    }
+
+    /**
+     * @param string $details2en
+     */
+    public function setDetails2en($details2en)
+    {
+        $this->details2en = $details2en;
+    }
+
+    /**
+     * @return string
+     */
+    public function getBeforeOperationen()
+    {
+        return $this->beforeOperationen;
+    }
+
+    /**
+     * @param string $beforeOperationen
+     */
+    public function setBeforeOperationen($beforeOperationen)
+    {
+        $this->beforeOperationen = $beforeOperationen;
+    }
+
+    /**
+     * @return string
+     */
+    public function getBeforeOperation1en()
+    {
+        return $this->beforeOperation1en;
+    }
+
+    /**
+     * @param string $beforeOperation1en
+     */
+    public function setBeforeOperation1en($beforeOperation1en)
+    {
+        $this->beforeOperation1en = $beforeOperation1en;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDeroulementOperationen()
+    {
+        return $this->deroulementOperationen;
+    }
+
+    /**
+     * @param string $deroulementOperationen
+     */
+    public function setDeroulementOperationen($deroulementOperationen)
+    {
+        $this->deroulementOperationen = $deroulementOperationen;
+    }
+
+    /**
+     * @return string
+     */
+    public function getAfterOperationen()
+    {
+        return $this->afterOperationen;
+    }
+
+    /**
+     * @param string $afterOperationen
+     */
+    public function setAfterOperationen($afterOperationen)
+    {
+        $this->afterOperationen = $afterOperationen;
+    }
+
+    /**
+     * @return string
+     */
+    public function getAfterOperation1en()
+    {
+        return $this->afterOperation1en;
+    }
+
+    /**
+     * @param string $afterOperation1en
+     */
+    public function setAfterOperation1en($afterOperation1en)
+    {
+        $this->afterOperation1en = $afterOperation1en;
+    }
+
+    /**
+     * @return string
+     */
+    public function getComplicationsen()
+    {
+        return $this->complicationsen;
+    }
+
+    /**
+     * @param string $complicationsen
+     */
+    public function setComplicationsen($complicationsen)
+    {
+        $this->complicationsen = $complicationsen;
+    }
+
+    /**
+     * @return string
+     */
+    public function getComplications1en()
+    {
+        return $this->complications1en;
+    }
+
+    /**
+     * @param string $complications1en
+     */
+    public function setComplications1en($complications1en)
+    {
+        $this->complications1en = $complications1en;
+    }
+
 }
 

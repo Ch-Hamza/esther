@@ -34,7 +34,11 @@
                             <li class="menu-item menu-item-has-children"><a href="{{ path('homepage') }}#department" class="nav-link">{{ 'translate.intervention'|trans }}</a>
                                 <ul>
                                     {% for c in chirurgies %}
-                                    <li class="menu-item"><a href="{{ path('chirurgie_index', {'id': c.id}) }}">{{ c.name }}</a></li>
+                                        {% if app.request.locale =='fr' %}
+                                            <li class="menu-item"><a href="{{ path('chirurgie_index', {'id': c.id}) }}">{{ c.name }}</a></li>
+                                        {% else  %}
+                                            <li class="menu-item"><a href="{{ path('chirurgie_index', {'id': c.id}) }}">{{ c.nameen }}</a></li>
+                                        {% endif %}
                                     {% endfor %}
                                 </ul>
                             </li>
@@ -229,7 +233,11 @@
                         {% for c in chirurgies %}
                             <li>
                                 <img src="{{ vich_uploader_asset(c,'imageFile2') }}" alt="">
-                                {{ c.name }}
+                                {% if app.request.locale =='fr' %}
+                                    {{ c.name }}
+                                {% else %}
+                                    {{ c.nameen }}
+                                {% endif %}
                             </li>
                         {% endfor %}
                     </ul>
@@ -245,9 +253,19 @@
                                 <div class="col-lg-6">
                                     <div class="tm-dept-details-wrap">
                                         <div class="tm-about tm-gray-bg">
-                                            <h3 class="tm-about-title"><span>{{ c.name }}</span></h3>
+                                            <h3 class="tm-about-title"><span>
+                                                {% if app.request.locale =='fr' %}
+                                                    {{ c.name }}
+                                                {% else %}
+                                                    {{ c.nameen }}
+                                                {% endif %}
+                                                </span></h3>
                                             <div class="tm-about-text">
+                                             {% if app.request.locale =='fr' %}
                                                 {{ c.description|raw }}
+                                             {% else %}
+                                                 {{ c.descriptionen|raw }}
+                                             {% endif %}
                                             </div>
                                             <div class="empty-space col-xs-b25"></div>
                                             <div class="tm-about-btn">

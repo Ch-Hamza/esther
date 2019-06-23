@@ -73,6 +73,20 @@ class Chirurgie
      */
     private $updatedAt;
 
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nameen", type="string", length=255)
+     */
+    private $nameen;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="descriptionen", type="text")
+     */
+    private $descriptionen;
+
 
     /**
      * Get id
@@ -219,5 +233,39 @@ class Chirurgie
     {
         $this->image2 = $image2;
     }
+
+    /**
+     * @return string
+     */
+    public function getNameen()
+    {
+        return $this->nameen;
+    }
+
+    /**
+     * @param string $nameen
+     */
+    public function setNameen($nameen)
+    {
+        $this->nameen = $nameen;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDescriptionen()
+    {
+        return $this->descriptionen;
+    }
+
+    /**
+     * @param string $descriptionen
+     */
+    public function setDescriptionen($descriptionen)
+    {
+        $this->descriptionen = $descriptionen;
+    }
+
+
 }
 

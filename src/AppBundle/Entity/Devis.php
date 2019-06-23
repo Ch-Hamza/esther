@@ -79,7 +79,7 @@ class Devis
     /**
      * @var string
      *
-     * @ORM\Column(name="anticidMedicaux", type="string", length=255)
+     * @ORM\Column(name="anticidMedicaux", type="string", length=255, nullable=true)
      */
     private $anticidMedicaux;
 
@@ -114,7 +114,7 @@ class Devis
     /**
      * @var string
      *
-     * @ORM\Column(name="commentaires", type="string", length=255)
+     * @ORM\Column(name="commentaires", type="string", length=255, nullable=true)
      */
     private $commentaires;
 

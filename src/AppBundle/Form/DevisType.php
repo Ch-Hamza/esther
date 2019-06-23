@@ -90,6 +90,7 @@ class DevisType extends AbstractType
                     'class' => 'form-control tm-form-field input-no-borders',
                 ),
                 'label' => false,
+                'required' => false,
             ))
 
             ->add('typeChirurgie', ChoiceType::class, array(
@@ -213,6 +214,7 @@ class DevisType extends AbstractType
                     'class' => 'form-control tm-form-field input-no-borders',
                 ),
                 'label' => false,
+                'required' => false,
             ))
             ->add('save',  SubmitType::class, array(
                 'label' => 'translate.devis84',
