@@ -16,10 +16,21 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="tm-blog-hero-title">{{ chirurgie.name }}</h1>
+                    <h1 class="tm-blog-hero-title">
+                        {% if app.request.locale =='fr' %}
+                            {{ chirurgie.name }}
+                        {% else  %}
+                            {{ chirurgie.nameen }}
+                        {% endif %}</h1>
                     <ul class="tm-breadcrumb">
                         <li><a href="{{ path('homepage') }}">Home</a></li>
-                        <li>{{ chirurgie.name }}</li>
+                        <li>
+                        {% if app.request.locale =='fr' %}
+                            {{ chirurgie.name }}
+                        {% else  %}
+                            {{ chirurgie.nameen }}
+                        {% endif %}
+                        </li>
                     </ul>
                 </div><!-- .col -->
             </div>
@@ -32,7 +43,11 @@
         <div class="row justify-content-center p-5">
             {% if(chirurgie.details) %}
             <div class="col-lg-10 col-md-10">
-                {{ chirurgie.details|raw }}
+                {% if app.request.locale =='fr' %}
+                    {{ chirurgie.details|raw }}
+                {% else  %}
+                    {{ chirurgie.detailsen|raw }}
+                {% endif %}
             </div>
             {% endif %}
 
@@ -44,7 +59,11 @@
 
             {% if(chirurgie.details1) %}
             <div class="col-lg-10 col-md-10 pt-5">
-                {{ chirurgie.details1|raw }}
+                {% if app.request.locale =='fr' %}
+                    {{ chirurgie.details1|raw }}
+                {% else  %}
+                    {{ chirurgie.details1en|raw }}
+                {% endif %}
             </div>
             {% endif %}
 
@@ -56,13 +75,22 @@
 
             {% if(chirurgie.details2) %}
             <div class="col-lg-10 col-md-10 pt-5">
-                {{ chirurgie.details2|raw }}
+                {% if app.request.locale =='fr' %}
+                    {{ chirurgie.details2|raw }}
+                {% else  %}
+                    {{ chirurgie.details2en|raw }}
+                {% endif %}
             </div>
             {% endif %}
 
             {% if(chirurgie.beforeOperation) %}
             <div class="col-lg-10 col-md-10 pt-5">
-                {{ chirurgie.beforeOperation|raw }}
+
+                {% if app.request.locale =='fr' %}
+                    {{ chirurgie.beforeOperation|raw }}
+                {% else  %}
+                    {{ chirurgie.beforeOperationen|raw }}
+                {% endif %}
             </div>
             {% endif %}
 
@@ -74,7 +102,12 @@
 
             {% if(chirurgie.beforeOperation1) %}
             <div class="col-lg-10 col-md-10 pt-5">
-                {{ chirurgie.beforeOperation1|raw }}
+
+                {% if app.request.locale =='fr' %}
+                    {{ chirurgie.beforeOperation1|raw }}
+                {% else  %}
+                    {{ chirurgie.beforeOperation1en|raw }}
+                {% endif %}
             </div>
             {% endif %}
 
@@ -86,33 +119,57 @@
 
             {% if(chirurgie.afterOperation) %}
             <div class="col-lg-10 col-md-10 pt-5">
-                {{ chirurgie.afterOperation|raw }}
+
+                {% if app.request.locale =='fr' %}
+                    {{ chirurgie.afterOperation|raw }}
+                {% else  %}
+                    {{ chirurgie.afterOperationen|raw }}
+                {% endif %}
             </div>
             {% endif %}
 
             {% if(chirurgie.afterOperation1) %}
             <div class="col-lg-10 col-md-10 pt-5">
-                {{ chirurgie.afterOperation1|raw }}
+
+                {% if app.request.locale =='fr' %}
+                    {{ chirurgie.afterOperation1|raw }}
+                {% else  %}
+                    {{ chirurgie.afterOperation1en|raw }}
+                {% endif %}
             </div>
             {% endif %}
 
             {% if(chirurgie.complications) %}
             <div class="col-lg-10 col-md-10 pt-5">
-                {{ chirurgie.complications|raw }}
+
+                {% if app.request.locale =='fr' %}
+                    {{ chirurgie.complications|raw }}
+                {% else  %}
+                    {{ chirurgie.complicationsen|raw }}
+                {% endif %}
             </div>
             {% endif %}
 
             {% if(chirurgie.complications1) %}
             <div class="col-lg-10 col-md-10 pt-5">
-                {{ chirurgie.complications1|raw }}
+
+                {% if app.request.locale =='fr' %}
+                    {{ chirurgie.complications1|raw }}
+                {% else  %}
+                    {{ chirurgie.complications1en|raw }}
+                {% endif %}
             </div>
             {% endif %}
 
-            {% if(chirurgie.tarifs) %}
+            {#
+             {% if(chirurgie.tarifs) %}
             <div class="col-lg-10 col-md-10 pt-5">
                 {{ chirurgie.tarifs|raw }}
             </div>
             {% endif %}
+            #}
+
+
         </div>
     </div>
     <!-- End Site Content -->

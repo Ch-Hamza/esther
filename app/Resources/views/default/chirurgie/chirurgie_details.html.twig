@@ -16,10 +16,19 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="tm-blog-hero-title">{{ chirurgie.name }}</h1>
+                    <h1 class="tm-blog-hero-title">
+                        {% if app.request.locale =='fr' %}
+                            {{ chirurgie.name }}
+                        {% else  %}
+                            {{ chirurgie.nameen }}
+                        {% endif %}</h1>
                     <ul class="tm-breadcrumb">
                         <li><a href="{{ path('homepage') }}">Home</a></li>
-                        <li>{{ chirurgie.name }}</li>
+                        <li>{% if app.request.locale =='fr' %}
+                                {{ chirurgie.name }}
+                            {% else  %}
+                                {{ chirurgie.nameen }}
+                            {% endif %}</li>
                     </ul>
                 </div><!-- .col -->
             </div>
@@ -31,7 +40,12 @@
     <div class="container">
         <div class="row justify-content-center p-5">
             <div class="col-lg-10 col-md-10">
-                {{ chirurgie.description|raw }}
+
+                {% if app.request.locale =='fr' %}
+                    {{ chirurgie.description|raw }}
+                {% else  %}
+                    {{ chirurgie.descriptionen|raw }}
+                {% endif %}
             </div>
             <div class="col-lg-10 col-md-10">
                 {% for cat in chirurgie.categories %}
