@@ -96,7 +96,7 @@ translate.maling2: Envoyer
 translate.devis1: Nom
 translate.devis2: Prenom
 translate.devis3: Email
-translate.devis4: telephone
+translate.devis4: Telephone
 translate.devis5: Age
 translate.devis6: sexe
 translate.devis7: Madame
@@ -179,3 +179,6 @@ translate.devis82: Facebook
 translate.devis83: commentaires
 translate.devis84: Enovyer
 #end devis form
+translate.oui: Oui
+translate.non: Non
+translate.ant: Avez vous des antécédent médicaux

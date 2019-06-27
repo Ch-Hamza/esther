@@ -78,8 +78,15 @@ class Devis
 
     /**
      * @var string
+     * @ORM\Column(name="anticidMedicauxExist", type="string", length=255, nullable=true)
+     */
+     private $anticidMedicauxExist;
+
+    /**
+     * @var string
      *
-     * @ORM\Column(name="anticidMedicaux", type="string", length=255, nullable=true)
+     * @ORM\Column(name="anticidMedicaux", type="text", nullable=true)
+     *
      */
     private $anticidMedicaux;
 
@@ -453,6 +460,22 @@ class Devis
     public function setAutreDetails($autre_details)
     {
         $this->autre_details = $autre_details;
+    }
+
+    /**
+     * @return string
+     */
+    public function getAnticidMedicauxExist()
+    {
+        return $this->anticidMedicauxExist;
+    }
+
+    /**
+     * @param string $anticidMedicauxExist
+     */
+    public function setAnticidMedicauxExist($anticidMedicauxExist)
+    {
+        $this->anticidMedicauxExist = $anticidMedicauxExist;
     }
 }
 

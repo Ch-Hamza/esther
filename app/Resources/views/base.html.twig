@@ -162,6 +162,17 @@
                     }
                 });
                 $("#devis_typeChirurgie").trigger("change");
+
+                $("#devis_anticidMedicauxExist").on('change', function () {
+                    var val = $("#devis_anticidMedicauxExist").val();
+                    if (val === "Oui") {
+                        $('#devis_anticidMedicaux').show();
+                    }
+                    else {
+                        $('#devis_anticidMedicaux').hide();
+                    }
+                });
+                $("#devis_anticidMedicauxExist").trigger("change");
             });
         </script>
         {% endblock %}
