@@ -47,9 +47,9 @@ class DefaultController extends Controller
             $em->persist($devis);
             $em->flush();
 
-            $message = (new \Swift_Message('Test Email'))
-                ->setFrom('fathallah.ghassen97@gmail.com')
-                ->setTo('fathallah.ghassen97@gmail.com')
+            $message = (new \Swift_Message('Devis N°'.$devis->getId()))
+                ->setFrom('esther.esthetica@gmail.com')
+                ->setTo('esther.esthetica@gmail.com')
                 ->setBody(
                     $this->renderView(
                         'Emails/devis.html.twig',
